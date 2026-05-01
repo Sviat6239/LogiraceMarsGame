@@ -1,5 +1,5 @@
 export class Player{
-    constructor(hunger, thirst, health, mentalHealth, radiation, intoxication, stamina, freeSpace, maxWeight, equipedScafander, inventory){
+    constructor(hunger, thirst, health, mentalHealth, radiation, intoxication, stamina, freeSpace, maxWeight, equipedSpacesuit, inventory){
         this.hunger = hunger;
         this.thirst = thirst;
         this.health = health;
@@ -9,8 +9,21 @@ export class Player{
         this.stamina = stamina;
         this.freeSpace = freeSpace;
         this.maxWeight = maxWeight;
-        this.equipedScafander = equipedScafander;
+        this.equipedScafander = equipedSpacesuit;
         this.inventory = inventory;
+    }
+}
+
+export class Spacesuit{
+    constructor(title, description, maxWeight, weight, freeSpace, maxOxygen, oxygen, durability){
+        this.title = title;
+        this.description = description;
+        this.maxWeight = maxWeight;
+        this.weight = weight;
+        this.freeSpace = freeSpace;
+        this.maxOxygen = maxOxygen;
+        this.oxygen = oxygen;
+        this.durability = durability;
     }
 }
 

@@ -11,5 +11,5 @@ player.intoxication = 0;
 player.radiation = 0;
 player.maxWeight = 60;
 player.freeSpace = 10;
-player.equipedScafander = false;
+player.equipedSpaceSuit = false;
 player.inventory = [];
