@@ -6,7 +6,7 @@ export class StorageModule extends StateModule {
         this.waterTanks = watterTanks;
         this.fuelTanks = fuelTanks;
         this.fridges = fridges;
-        this.oxygen = oxygenCylinders;
+        this.oxygenCylinders = oxygenCylinders;
     }
 }
 

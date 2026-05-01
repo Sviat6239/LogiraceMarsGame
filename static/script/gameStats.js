@@ -42,8 +42,17 @@ export class State{
     }
 }
 
-export class StateModule{
-    constructor(title, description, damage, maxSpace, freeSpace, oxygen, maxOxygen, temperature, airPollution){
+export default class StateModule {
+    constructor({
+                    title, description,
+                    damage = 0,
+                    maxSpace = 0,
+                    freeSpace = 0,
+                    oxygen = 0,
+                    maxOxygen = 100,
+                    temperature = 20,
+                    airPollution = 0
+                }) {
         this.title = title;
         this.description = description;
         this.damage = damage;
