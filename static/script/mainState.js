@@ -1,5 +1,5 @@
 import { State } from "./gameStats.js";
-import { MainModule, StorageModule, GreenHouseModule, LivingModule, ReactorModule } from "./stateModules.js";
+import { MainModule, StorageModule, GreenHouseModule, LivingModule, ReactorModule, CorridorModule, CafeteriaModule } from "./stateModules.js";
 
 export let mainState = new State();
 
@@ -12,8 +12,81 @@ const mainModule = new MainModule({
 	oxygen: 18400,
 	maxOxygen: 20000,
 	temperature: 20,
-	airPollution: 1
+	airPollution: 1,
+	energyConsumption: 2000,
+	moinsture: 20,
+	nextLocation: [mainCorridor]
 });
+
+const cafeteriaModule = new CafeteriaModule({
+	title: 'Cafeteria Module',
+	description: 'Cafeteria module',
+	maxSpace: 400,
+	freeSpace: 400,
+	oxygen: 10000,
+	maxOxygen: 11000,
+	temperature: 19,
+	airPollution: 2,
+	energyConsumption: 2700,
+	moinsture: 23,
+	nextLocation: [mainCorridor, greenCorridor, livingCorridor, technicalCorridor]
+})
+
+const mainCorridor = new CorridorModule({
+	title: 'Main corridor',
+	description: 'Just corridor',
+	maxSpace: 250,
+	freeSpace: 250,
+	oxygen: 3000,
+	maxOxygen: 3200,
+	temperature: 16,
+	airPollution: 2,
+	moinsture: 18,
+	energyConsumption: 400,
+	nextLocation: [cafeteriaModule],
+})
+
+const technicalCorridor = new CorridorModule({
+	title: 'Technical corridor',
+	description: 'Straight way to sorages and the reactor',
+	maxSpace: 200,
+	freeSpace: 200,
+	oxygen: 2700,
+	maxOxygen: 3000,
+	temperature: 17,
+	airPollution: 2,
+	moinsure: 22,
+	energyConsumption: 370,
+	nextLocation: [cafeteriaModule, storageModuleA, storageModuleB, reactorModule],
+})
+
+const greenCorridor = new CorridorModule({
+	title: 'Green Corridor',
+	description: 'Way to the green-house modules',
+	maxSpace: 200,
+	freeSpace: 200,
+	oxygen: 3000,
+	maxOxygen: 3000,
+	temperature: 19,
+	airPollution: 0,
+	moinsture: 30,
+	energyConsumption: 370,
+	nextLocation: [cafeteriaModule, greenHouseModuleA, greenHouseModuleB],
+})
+
+const livingCorridor = new CorridorModule({
+	title: 'Corridor of life',
+	description: 'Corridor to the living modules',
+	maxSpace: 250,
+	freeSpace: 250,
+	oxygen: 3000,
+	maxOxygen: 3000,
+	temperature: 18,
+	airPollution: 1,
+	moinsure: 18,
+	energyConsumption: 390,
+	nextLocation: [cafeteriaModule, livingModuleA, livingModuleB, livingModuleC],
+})
 
 const storageModuleA = new StorageModule({
 	title: 'Storage module A',
@@ -26,8 +99,11 @@ const storageModuleA = new StorageModule({
 	airPollution: 1,
 	waterTanks: 4,
 	fuelTanks: 3,
-	fridges: 2,
-	oxygenCylinders: 20
+	fridges: 3,
+	oxygenCylinders: 20,
+	energyConsumption: 4000,
+	moinsture: 20,
+	nextLocation: [technicalCorridor],
 });
 
 const storageModuleB = new StorageModule({
@@ -42,7 +118,10 @@ const storageModuleB = new StorageModule({
 	waterTanks: 4,
 	fuelTanks: 3,
 	fridges: 2,
-	oxygenCylinders: 20
+	oxygenCylinders: 20,
+	energyConsumption: 3500,
+	moinsture: 21,
+	nextLocation: [technicalCorridor]
 });
 
 const livingModuleA = new LivingModule({
@@ -54,7 +133,10 @@ const livingModuleA = new LivingModule({
 	maxOxygen: 9000,
 	temperature: 22,
 	airPollution: 1,
-	beds: 2
+	beds: 2,
+	energyConsumption: 1000,
+	moinsture: 20,
+	nextLocation: [livingCorridor]
 });
 
 const livingModuleB = new LivingModule({
@@ -66,7 +148,10 @@ const livingModuleB = new LivingModule({
 	maxOxygen: 9000,
 	temperature: 22,
 	airPollution: 1,
-	beds: 2
+	beds: 2,
+	energyConsumption: 1000,
+	moinsture: 22,
+	nextLocation: [livingCorridor]
 });
 
 const livingModuleC = new LivingModule({
@@ -78,7 +163,10 @@ const livingModuleC = new LivingModule({
 	maxOxygen: 9000,
 	temperature: 22,
 	airPollution: 1,
-	beds: 2
+	beds: 2,
+	energyConsumption: 1000,
+	moinsture: 21,
+	nextLocation: [livingCorridor]
 });
 
 const greenHouseModuleA = new GreenHouseModule({
@@ -91,7 +179,10 @@ const greenHouseModuleA = new GreenHouseModule({
 	maxOxygen: 28000,
 	temperature: 26,
 	airPollution: 1,
-	hydroponics: 6
+	hydroponics: 6,
+	energyConsumption: 5000,
+	moinsture: 58,
+	nextLocation: [greenCorridor]
 })
 
 const greenHouseModuleB = new GreenHouseModule({
@@ -104,7 +195,10 @@ const greenHouseModuleB = new GreenHouseModule({
 	maxOxygen: 28000,
 	temperature: 26,
 	airPollution: 1,
-	hydroponics: 6
+	hydroponics: 6,
+	energyConsumption: 5000,
+	moinsture: 60,
+	nextLocation: [greenCorridor]
 })
 
 const reactorModule = new ReactorModule({
@@ -115,23 +209,31 @@ const reactorModule = new ReactorModule({
 	freeSpace: 200,
 	oxygen: 8000,
 	maxOxygen: 8000,
-	temperature: 27,
+	temperature: 31,
 	airPollution: 2,
 	coreTemperature: 311,
 	fuelProcessing: 5,
 	energyProduction: 100000,
+	energyConsumption: 2000,
+	moinsture: 25,
+	nextLocation: [technicalCorridor]
 })
 
 mainState.title = 'Main state';
 mainState.description = 'Main state description';
 mainState.modules = [
 	mainModule,
-	storageModuleA,
-	storageModuleB,
+	mainCorridor,
+	cafeteriaModule,
+	livingCorridor,
 	livingModuleA,
 	livingModuleB,
 	livingModuleC,
+	greenCorridor,
 	greenHouseModuleA,
 	greenHouseModuleB,
-	reactorModule
+	reactorModule,
+	technicalCorridor,
+	storageModuleA,
+	storageModuleB,
 ];

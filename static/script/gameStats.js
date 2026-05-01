@@ -54,6 +54,8 @@ export default class StateModule {
         temperature = 20,
         airPollution = 0,
         energyConsumption = 0,
+        moinsture = 20,
+        nextLocation = [],
     }) {
         this.title = title;
         this.description = description;
@@ -65,6 +67,8 @@ export default class StateModule {
         this.temperature = temperature;
         this.airPollution = airPollution;
         this.energyConsumption = energyConsumption;
+        this.moinsture = moinsture;
+        this.nextLocation = nextLocation;
     }
 }
 
