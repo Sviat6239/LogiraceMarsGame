@@ -30,15 +30,20 @@ export class Spacesuit{
 }
 
 export class State{
-    constructor(title, description, modules) {
+    constructor(title, description, modules, temperature, oxygen, maxOxygen, maxSpace, freeSpace, airPollution) {
         this.title = title;
         this.description = description;
         this.modules = modules;
+        this.temperature = temperature;
+        this.oxygen = oxygen;
+        this.maxSpace = maxSpace;
+        this.freeSpace = freeSpace;
+        this.airPolution = airPollution;
     }
 }
 
-export class StateModules{
-    constructor(title, description, damage, maxSpace, freeSpace, oxygen, maxOxygen){
+export class StateModule{
+    constructor(title, description, damage, maxSpace, freeSpace, oxygen, maxOxygen, temperature, airPollution){
         this.title = title;
         this.description = description;
         this.damage = damage;
@@ -46,6 +51,8 @@ export class StateModules{
         this.freeSpace = freeSpace;
         this.oxygen = oxygen;
         this.maxOxygen = maxOxygen;
+        this.temperature = temperature;
+        this.airPollution = airPollution;
     }
 }
 
