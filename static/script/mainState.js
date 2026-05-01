@@ -1,10 +1,10 @@
-import {State} from "./gameStats.js";
-import {MainModule, StorageModule, GreenHouseModule, LivingModule} from "./stateModules.js";
+import { State } from "./gameStats.js";
+import { MainModule, StorageModule, GreenHouseModule, LivingModule, ReactorModule } from "./stateModules.js";
 
 export let mainState = new State();
 
 const mainModule = new MainModule({
-	title:'Main module',
+	title: 'Main module',
 	description: 'Main module description',
 	damage: 0,
 	maxSpace: 500,
@@ -46,7 +46,7 @@ const storageModuleB = new StorageModule({
 });
 
 const livingModuleA = new LivingModule({
-	title: 'LivingModule A',
+	title: 'Living Module A',
 	description: 'Living module A description',
 	maxSpace: 300,
 	freeSpace: 300,
@@ -58,7 +58,7 @@ const livingModuleA = new LivingModule({
 });
 
 const livingModuleB = new LivingModule({
-	title: 'LivingModule B',
+	title: 'Living Module B',
 	description: 'Living module B description',
 	maxSpace: 300,
 	freeSpace: 300,
@@ -70,7 +70,7 @@ const livingModuleB = new LivingModule({
 });
 
 const livingModuleC = new LivingModule({
-	title: 'LivingModule C',
+	title: 'Living Module C',
 	description: 'Living module C description',
 	maxSpace: 300,
 	freeSpace: 300,
@@ -107,6 +107,21 @@ const greenHouseModuleB = new GreenHouseModule({
 	hydroponics: 6
 })
 
+const reactorModule = new ReactorModule({
+	title: 'Reactor Module',
+	description: 'Reactor Module Description',
+	damage: 0,
+	maxSpace: 200,
+	freeSpace: 200,
+	oxygen: 8000,
+	maxOxygen: 8000,
+	temperature: 27,
+	airPollution: 2,
+	coreTemperature: 311,
+	fuelProcessing: 5,
+	energyProduction: 100000,
+})
+
 mainState.title = 'Main state';
 mainState.description = 'Main state description';
 mainState.modules = [
@@ -117,5 +132,6 @@ mainState.modules = [
 	livingModuleB,
 	livingModuleC,
 	greenHouseModuleA,
-	greenHouseModuleB
+	greenHouseModuleB,
+	reactorModule
 ];

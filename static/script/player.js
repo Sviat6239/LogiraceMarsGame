@@ -1,6 +1,7 @@
-import {Player} from "./gameStats";
+import { Player } from "./gameStats.js";
+import { mainState } from "./mainState.js";
 
-let player = new Player();
+export let player = new Player();
 
 player.health = 100;
 player.mentalHealth = 100;
@@ -13,3 +14,4 @@ player.maxWeight = 60;
 player.freeSpace = 10;
 player.equipedSpaceSuit = false;
 player.inventory = [];
+player.location = mainState.modules[4];

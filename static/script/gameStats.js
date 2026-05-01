@@ -1,5 +1,5 @@
-export class Player{
-    constructor(hunger, thirst, health, mentalHealth, radiation, intoxication, stamina, maxSpace, freeSpace, maxWeight, equipedSpacesuit, inventory){
+export class Player {
+    constructor(hunger, thirst, health, mentalHealth, radiation, intoxication, stamina, maxSpace, freeSpace, maxWeight, equipedSpacesuit, inventory, location) {
         this.hunger = hunger;
         this.thirst = thirst;
         this.health = health;
@@ -12,11 +12,12 @@ export class Player{
         this.maxWeight = maxWeight;
         this.equipedScafander = equipedSpacesuit;
         this.inventory = inventory;
+        this.location = location;
     }
 }
 
-export class Spacesuit{
-    constructor(title, description, maxWeight, weight, maxSpace, freeSpace, maxOxygen, oxygen, durability){
+export class Spacesuit {
+    constructor(title, description, maxWeight, weight, maxSpace, freeSpace, maxOxygen, oxygen, durability) {
         this.title = title;
         this.description = description;
         this.maxWeight = maxWeight;
@@ -29,7 +30,7 @@ export class Spacesuit{
     }
 }
 
-export class State{
+export class State {
     constructor(title, description, modules, temperature, oxygen, maxOxygen, maxSpace, freeSpace, airPollution) {
         this.title = title;
         this.description = description;
@@ -44,15 +45,16 @@ export class State{
 
 export default class StateModule {
     constructor({
-                    title, description,
-                    damage = 0,
-                    maxSpace = 0,
-                    freeSpace = 0,
-                    oxygen = 0,
-                    maxOxygen = 100,
-                    temperature = 20,
-                    airPollution = 0
-                }) {
+        title, description,
+        damage = 0,
+        maxSpace = 0,
+        freeSpace = 0,
+        oxygen = 0,
+        maxOxygen = 100,
+        temperature = 20,
+        airPollution = 0,
+        energyConsumption = 0,
+    }) {
         this.title = title;
         this.description = description;
         this.damage = damage;
@@ -62,19 +64,20 @@ export default class StateModule {
         this.maxOxygen = maxOxygen;
         this.temperature = temperature;
         this.airPollution = airPollution;
+        this.energyConsumption = energyConsumption;
     }
 }
 
-export class SolarPanels{
-    constructor(production, dustCovering, damage){
+export class SolarPanels {
+    constructor(production, dustCovering, damage) {
         this.production = production;
         this.dustCovering = dustCovering;
         this.damage = damage;
     }
 }
 
-export class Item{
-    constructor(title, description, space, weight){
+export class Item {
+    constructor(title, description, space, weight) {
         this.title = title;
         this.description = description;
         this.space = space;

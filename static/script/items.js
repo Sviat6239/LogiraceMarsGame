@@ -1,2 +1,2 @@
-import {Item} from "./gameStats";
+import { Item } from "./gameStats.js";
 
