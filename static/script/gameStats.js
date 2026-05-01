@@ -1,5 +1,5 @@
 export class Player{
-    constructor(hunger, thirst, health, mentalHealth, radiation, intoxication, stamina, freeSpace, maxWeight, equipedSpacesuit, inventory){
+    constructor(hunger, thirst, health, mentalHealth, radiation, intoxication, stamina, maxSpace, freeSpace, maxWeight, equipedSpacesuit, inventory){
         this.hunger = hunger;
         this.thirst = thirst;
         this.health = health;
@@ -7,6 +7,7 @@ export class Player{
         this.radiation = radiation;
         this.intoxication = intoxication;
         this.stamina = stamina;
+        this.maxSpace = maxSpace;
         this.freeSpace = freeSpace;
         this.maxWeight = maxWeight;
         this.equipedScafander = equipedSpacesuit;
@@ -15,11 +16,12 @@ export class Player{
 }
 
 export class Spacesuit{
-    constructor(title, description, maxWeight, weight, freeSpace, maxOxygen, oxygen, durability){
+    constructor(title, description, maxWeight, weight, maxSpace, freeSpace, maxOxygen, oxygen, durability){
         this.title = title;
         this.description = description;
         this.maxWeight = maxWeight;
         this.weight = weight;
+        this.maxSpace = maxSpace;
         this.freeSpace = freeSpace;
         this.maxOxygen = maxOxygen;
         this.oxygen = oxygen;
@@ -27,17 +29,23 @@ export class Spacesuit{
     }
 }
 
-export class StorageModule{
-    constructor(title, space){
+export class State{
+    constructor(title, description, modules) {
         this.title = title;
-        this.space = space;
+        this.description = description;
+        this.modules = modules;
     }
 }
 
-export class GreeHouseModule{
-    constructor(light, growSpeed){
-        this.light = light;
-        this.growSpeed = growSpeed;
+export class StateModules{
+    constructor(title, description, damage, maxSpace, freeSpace, oxygen, maxOxygen){
+        this.title = title;
+        this.description = description;
+        this.damage = damage;
+        this.maxSpace = maxSpace;
+        this.freeSpace = freeSpace;
+        this.oxygen = oxygen;
+        this.maxOxygen = maxOxygen;
     }
 }
 
