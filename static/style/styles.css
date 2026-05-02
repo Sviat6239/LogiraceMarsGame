@@ -10,7 +10,8 @@ body {
 
 .controlPanel {
     background-color: rgb(94, 3, 3);
-    border-color: black;
+    border-color: rgb(255, 255, 255);
+    border-width: 1px;
     border-radius: 12px;
     margin-top: auto;
     text-align: center;

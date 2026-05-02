@@ -15,7 +15,7 @@ const mainModule = new MainModule({
 	airPollution: 1,
 	energyConsumption: 2000,
 	moinsture: 20,
-	nextLocation: [mainCorridor]
+	nextLocation: [1]
 });
 
 const cafeteriaModule = new CafeteriaModule({
@@ -29,7 +29,7 @@ const cafeteriaModule = new CafeteriaModule({
 	airPollution: 2,
 	energyConsumption: 2700,
 	moinsture: 23,
-	nextLocation: [mainCorridor, greenCorridor, livingCorridor, technicalCorridor]
+	nextLocation: [1, 7, 3, 11]
 })
 
 const mainCorridor = new CorridorModule({
@@ -43,7 +43,7 @@ const mainCorridor = new CorridorModule({
 	airPollution: 2,
 	moinsture: 18,
 	energyConsumption: 400,
-	nextLocation: [cafeteriaModule],
+	nextLocation: [2],
 })
 
 const technicalCorridor = new CorridorModule({
@@ -57,7 +57,7 @@ const technicalCorridor = new CorridorModule({
 	airPollution: 2,
 	moinsure: 22,
 	energyConsumption: 370,
-	nextLocation: [cafeteriaModule, storageModuleA, storageModuleB, reactorModule],
+	nextLocation: [2, 12, 13, 10],
 })
 
 const greenCorridor = new CorridorModule({
@@ -71,7 +71,7 @@ const greenCorridor = new CorridorModule({
 	airPollution: 0,
 	moinsture: 30,
 	energyConsumption: 370,
-	nextLocation: [cafeteriaModule, greenHouseModuleA, greenHouseModuleB],
+	nextLocation: [2, 8, 9],
 })
 
 const livingCorridor = new CorridorModule({
@@ -85,7 +85,7 @@ const livingCorridor = new CorridorModule({
 	airPollution: 1,
 	moinsure: 18,
 	energyConsumption: 390,
-	nextLocation: [cafeteriaModule, livingModuleA, livingModuleB, livingModuleC],
+	nextLocation: [2, 4, 5, 6],
 })
 
 const storageModuleA = new StorageModule({
@@ -103,7 +103,7 @@ const storageModuleA = new StorageModule({
 	oxygenCylinders: 20,
 	energyConsumption: 4000,
 	moinsture: 20,
-	nextLocation: [technicalCorridor],
+	nextLocation: [11],
 });
 
 const storageModuleB = new StorageModule({
@@ -121,7 +121,7 @@ const storageModuleB = new StorageModule({
 	oxygenCylinders: 20,
 	energyConsumption: 3500,
 	moinsture: 21,
-	nextLocation: [technicalCorridor]
+	nextLocation: [11]
 });
 
 const livingModuleA = new LivingModule({
@@ -136,7 +136,7 @@ const livingModuleA = new LivingModule({
 	beds: 2,
 	energyConsumption: 1000,
 	moinsture: 20,
-	nextLocation: [livingCorridor]
+	nextLocation: [3]
 });
 
 const livingModuleB = new LivingModule({
@@ -151,7 +151,7 @@ const livingModuleB = new LivingModule({
 	beds: 2,
 	energyConsumption: 1000,
 	moinsture: 22,
-	nextLocation: [livingCorridor]
+	nextLocation: [3]
 });
 
 const livingModuleC = new LivingModule({
@@ -166,7 +166,7 @@ const livingModuleC = new LivingModule({
 	beds: 2,
 	energyConsumption: 1000,
 	moinsture: 21,
-	nextLocation: [livingCorridor]
+	nextLocation: [3]
 });
 
 const greenHouseModuleA = new GreenHouseModule({
@@ -182,7 +182,7 @@ const greenHouseModuleA = new GreenHouseModule({
 	hydroponics: 6,
 	energyConsumption: 5000,
 	moinsture: 58,
-	nextLocation: [greenCorridor]
+	nextLocation: [7]
 })
 
 const greenHouseModuleB = new GreenHouseModule({
@@ -198,7 +198,7 @@ const greenHouseModuleB = new GreenHouseModule({
 	hydroponics: 6,
 	energyConsumption: 5000,
 	moinsture: 60,
-	nextLocation: [greenCorridor]
+	nextLocation: [7]
 })
 
 const reactorModule = new ReactorModule({
@@ -216,24 +216,24 @@ const reactorModule = new ReactorModule({
 	energyProduction: 100000,
 	energyConsumption: 2000,
 	moinsture: 25,
-	nextLocation: [technicalCorridor]
+	nextLocation: [11]
 })
 
 mainState.title = 'Main state';
 mainState.description = 'Main state description';
 mainState.modules = [
-	mainModule,
-	mainCorridor,
-	cafeteriaModule,
-	livingCorridor,
-	livingModuleA,
-	livingModuleB,
-	livingModuleC,
-	greenCorridor,
-	greenHouseModuleA,
-	greenHouseModuleB,
-	reactorModule,
-	technicalCorridor,
-	storageModuleA,
-	storageModuleB,
+	mainModule, //0
+	mainCorridor, //1
+	cafeteriaModule, //2
+	livingCorridor, //3
+	livingModuleA, //4
+	livingModuleB, //5
+	livingModuleC, //6
+	greenCorridor, //7
+	greenHouseModuleA, //8
+	greenHouseModuleB, //9
+	reactorModule, //10
+	technicalCorridor, //11
+	storageModuleA, //12
+	storageModuleB, //13
 ];
