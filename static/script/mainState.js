@@ -55,7 +55,7 @@ const technicalCorridor = new CorridorModule({
 	maxOxygen: 3000,
 	temperature: 17,
 	airPollution: 2,
-	moinsure: 22,
+	moinsture: 22,
 	energyConsumption: 370,
 	nextLocation: [2, 12, 13, 10],
 })
@@ -83,7 +83,7 @@ const livingCorridor = new CorridorModule({
 	maxOxygen: 3000,
 	temperature: 18,
 	airPollution: 1,
-	moinsure: 18,
+	moinsture: 18,
 	energyConsumption: 390,
 	nextLocation: [2, 4, 5, 6],
 })
