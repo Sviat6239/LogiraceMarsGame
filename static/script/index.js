@@ -10,6 +10,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const buttons = document.querySelector('.moveBtn');
 
     const inventoryBtn = document.querySelector('.inventoryBtn');
+    const inventoryPanel = document.querySelector('.inventoryPanel');
 
     player.location = mainState.modules[0];
 
@@ -67,15 +68,17 @@ document.addEventListener("DOMContentLoaded", () => {
         update();
     }
 
+    inventoryPanel.classList.add('hidden');
+
     inventoryBtn.onclick = function () {
         inventoryIsOpened = !inventoryIsOpened;
 
         if (inventoryIsOpened) {
-            alert("Inventory has been opened");
+            inventoryPanel.classList.remove('hidden');
         } else {
-            alert("Inventory has been closed");
+            inventoryPanel.classList.add('hidden');
         }
-    }
+    };
 
 
     update();
