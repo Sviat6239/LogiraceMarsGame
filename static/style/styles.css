@@ -15,8 +15,8 @@ body {
     border-radius: 12px;
     margin-top: auto;
     text-align: center;
-    height: 200px;
-    width: 700px;
+    height: 220px;
+    width: 750px;
 
 }
 
@@ -34,4 +34,8 @@ h1 {
 h2 {
     height: 12px;
     font-size: 22px;
+}
+
+.inventory {
+    font-size: 30px;
 }

@@ -3,11 +3,15 @@ import { player } from "./player.js";
 
 document.addEventListener("DOMContentLoaded", () => {
 
+    let inventoryIsOpened = false;
+
     const location = document.querySelector('.location');
     const description = document.querySelector('.description');
     const buttons = document.querySelector('.moveBtn');
 
-    player.location = mainState.modules[5];
+    const inventoryBtn = document.querySelector('.inventory');
+
+    player.location = mainState.modules[0];
 
     function update() {
         location.textContent = player.location.title;
@@ -31,5 +35,22 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     }
 
+    function tick() {
+        player.location.oxygen -= 0.01;
+        console.log(player.location.oxygen);
+        update();
+    }
+
+    inventoryBtn.onclick = function () {
+        inventoryIsOpened = !inventoryIsOpened;
+
+        if (inventoryIsOpened) {
+            alert("Inventory has been opened");
+        } else {
+            alert("Inventory has been closed");
+        }
+    }
+
     update();
+    setInterval(tick, 1000);
 });

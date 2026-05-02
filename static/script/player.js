@@ -14,4 +14,4 @@ player.maxWeight = 60;
 player.freeSpace = 10;
 player.equipedSpaceSuit = false;
 player.inventory = [];
-player.location = mainState.modules[5];
+player.location = mainState.modules[0];

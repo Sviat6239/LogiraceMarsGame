@@ -43,7 +43,7 @@ const mainCorridor = new CorridorModule({
 	airPollution: 2,
 	moinsture: 18,
 	energyConsumption: 400,
-	nextLocation: [2],
+	nextLocation: [0, 2],
 })
 
 const technicalCorridor = new CorridorModule({
