@@ -56,6 +56,7 @@ export default class StateModule {
         energyConsumption = 0,
         moinsture = 20,
         nextLocation = [],
+        inventory = {},
     }) {
         this.title = title;
         this.description = description;
@@ -69,6 +70,7 @@ export default class StateModule {
         this.energyConsumption = energyConsumption;
         this.moinsture = moinsture;
         this.nextLocation = nextLocation;
+        this.invetory = inventory;
     }
 }
 
