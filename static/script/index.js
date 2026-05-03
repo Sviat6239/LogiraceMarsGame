@@ -1,5 +1,6 @@
 import { mainState } from "./mainState.js";
 import { player } from "./player.js";
+import { introDialogue } from "./dialogue.js";
 
 document.addEventListener("DOMContentLoaded", function () {
 
@@ -15,7 +16,52 @@ document.addEventListener("DOMContentLoaded", function () {
     const locInvDiv = document.querySelector(".locationInventory");
     const playerInvDiv = document.querySelector(".playerInventory");
 
+    const dialogueMessage = document.querySelector(".dialogueMessage");
+    const controlButtons = document.querySelector(".controlButtons");
+
+    let dialogue = null;
+    let dialogueStep = 0;
+    let dialogueActive = false;
+
     player.location = mainState.modules[0];
+
+    function startDialogue(data) {
+        dialogue = data;
+        dialogueStep = 0;
+        dialogueActive = true;
+        renderDialogue();
+    }
+
+    function renderDialogue() {
+        if (!dialogueActive) return;
+
+        const step = dialogue[dialogueStep];
+
+        dialogueMessage.textContent = step.text;
+        controlButtons.innerHTML = "";
+
+        const btn = document.createElement("button");
+        btn.textContent = "Далі";
+
+        btn.onclick = () => {
+            dialogueStep++;
+
+            if (dialogueStep >= dialogue.length) {
+                endDialogue();
+            } else {
+                renderDialogue();
+            }
+        };
+
+        controlButtons.appendChild(btn);
+    }
+
+    function endDialogue() {
+        dialogueActive = false;
+        dialogueMessage.textContent = "";
+        controlButtons.innerHTML = "";
+    }
+
 
     function update() {
 
@@ -33,12 +79,14 @@ document.addEventListener("DOMContentLoaded", function () {
             b.textContent = next.title;
 
             b.onclick = function () {
+                if (dialogueActive) return;
                 player.location = next;
                 update();
             };
 
             btns.appendChild(b);
         }
+
 
         locInvDiv.innerHTML = "<h3>Локація</h3>";
 
@@ -58,6 +106,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 pickBtn.textContent = "Взяти";
 
                 pickBtn.onclick = function () {
+                    if (dialogueActive) return;
                     player.pickUp(it, player.location);
                     update();
                 };
@@ -117,9 +166,12 @@ document.addEventListener("DOMContentLoaded", function () {
     invPanel.classList.add("hidden");
 
     invBtn.onclick = function () {
+        if (dialogueActive) return;
         invOpen = !invOpen;
         invPanel.classList.toggle("hidden", !invOpen);
     };
+
+    startDialogue(introDialogue);
 
     update();
     setInterval(tick, 1000);

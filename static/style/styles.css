@@ -1,9 +1,7 @@
 body {
-    display: flex;
     flex-direction: column;
     min-height: 95vh;
     display: flex;
-    justify-content: center;
     align-items: center;
     background-color: black;
 }
@@ -14,7 +12,6 @@ body {
     border-style: solid;
     border-width: 1px;
     border-radius: 12px;
-    margin-top: auto;
     text-align: center;
     height: 220px;
     width: 750px;
@@ -71,6 +68,7 @@ h2 {
     display: flex;
     gap: 20px;
     align-items: flex-start;
+    margin-top: auto;
 }
 
 .tools {
@@ -82,4 +80,9 @@ h2 {
     height: 220px;
     width: 300px;
     text-align: center;
+}
+
+.dialogueMessage {
+    font-size: 24px;
+    font-weight: bold;
 }
