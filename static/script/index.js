@@ -1,10 +1,12 @@
 import { mainState } from "./mainState.js";
 import { player } from "./player.js";
 import { introDialogue } from "./dialogue.js";
+import { mainGoal, subGoals } from "./goals.js";
 
 document.addEventListener("DOMContentLoaded", function () {
 
     let invOpen = false;
+    let goalsOpen = false;
 
     const loc = document.querySelector(".location");
     const desc = document.querySelector(".description");
@@ -12,6 +14,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
     const invBtn = document.querySelector(".inventoryBtn");
     const invPanel = document.querySelector(".inventoryPanel");
+
+    const goalsBtn = document.querySelector(".goalsBtn");
+    const goalsPanel = document.querySelector(".goalPanel");
 
     const locInvDiv = document.querySelector(".locationInventory");
     const playerInvDiv = document.querySelector(".playerInventory");
@@ -90,7 +95,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
         locInvDiv.innerHTML = "<h3>Локація</h3>";
 
-        let items = player.location.inventory || player.location.invetory || [];
+        let items = player.location.inventory;
 
         if (items.length === 0) {
             locInvDiv.innerHTML += "<p>Нічого немає</p>";
@@ -131,6 +136,8 @@ document.addEventListener("DOMContentLoaded", function () {
                 playerInvDiv.appendChild(p);
             }
         }
+
+        goalsPanel.innerHTML = "<h3>Задачі</h3>";
     }
 
     function calcOxygen() {
@@ -164,12 +171,35 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     invPanel.classList.add("hidden");
+    goalsPanel.classList.add("hidden");
+
+    function closeAllPanels() {
+        invOpen = false;
+        goalsOpen = false;
+
+        invPanel.classList.add("hidden");
+        goalsPanel.classList.add("hidden");
+    }
 
     invBtn.onclick = function () {
         if (dialogueActive) return;
-        invOpen = !invOpen;
+
+        const open = !invOpen;
+        closeAllPanels();
+
+        invOpen = open;
         invPanel.classList.toggle("hidden", !invOpen);
     };
+
+    goalsBtn.onclick = function () {
+        if (dialogueActive) return;
+
+        const open = !goalsOpen;
+        closeAllPanels();
+
+        goalsOpen = !goalsOpen;
+        goalsPanel.classList.toggle("hidden", !goalsOpen);
+    }
 
     startDialogue(introDialogue);
 
