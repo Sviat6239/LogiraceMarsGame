@@ -95,24 +95,33 @@ document.addEventListener("DOMContentLoaded", function () {
 
         locInvDiv.innerHTML = "<h3>Локація</h3>";
 
-        let items = player.location.inventory;
+        let items = player.location.inventory || {};
+        let keys = Object.keys(items);
 
-        if (items.length === 0) {
+        if (keys.length === 0) {
             locInvDiv.innerHTML += "<p>Нічого немає</p>";
         } else {
-            for (let i = 0; i < items.length; i++) {
 
-                let it = items[i];
+            for (let i = 0; i < keys.length; i++) {
+
+                let id = keys[i];
+                let count = items[id];
 
                 let p = document.createElement("p");
-                p.textContent = it.title + " ";
+                p.textContent = `${id} x${count}`;
 
                 let pickBtn = document.createElement("button");
                 pickBtn.textContent = "Взяти";
 
                 pickBtn.onclick = function () {
                     if (dialogueActive) return;
-                    player.pickUp(it, player.location);
+
+                    player.pickUp(
+                        { id, title: id, space: 1, weight: 1 },
+                        player.location,
+                        count
+                    );
+
                     update();
                 };
 
@@ -123,15 +132,20 @@ document.addEventListener("DOMContentLoaded", function () {
 
         playerInvDiv.innerHTML = "<h3>Інвентарь</h3>";
 
-        if (player.inventory.length === 0) {
+        let inv = player.inventory || {};
+        let keys = Object.keys(inv);
+
+        if (keys.length === 0) {
             playerInvDiv.innerHTML += "<p>Пусто</p>";
         } else {
-            for (let i = 0; i < player.inventory.length; i++) {
 
-                let it = player.inventory[i];
+            for (let i = 0; i < keys.length; i++) {
+
+                let id = keys[i];
+                let count = inv[id];
 
                 let p = document.createElement("p");
-                p.textContent = it.title;
+                p.textContent = `${id} x${count}`;
 
                 playerInvDiv.appendChild(p);
             }

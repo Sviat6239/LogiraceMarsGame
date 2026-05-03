@@ -52,7 +52,7 @@ class Battery extends Item {
     }
 }
 
-const cannedTuna = new Food({
+export const cannedTuna = new Food({
     title: 'Canned Tuna',
     description: 'Tasty tuna in a can',
     space: 0.1,
@@ -62,9 +62,7 @@ const cannedTuna = new Food({
     expirationDate: 365 * 5,
 })
 
-
-
-const botleOfWater = new Food({
+export const botleOfWater = new Food({
     title: 'Botle of water',
     description: 'Just water',
     space: 0.15,
@@ -74,7 +72,7 @@ const botleOfWater = new Food({
     expirationDate: 365 * 10,
 })
 
-const cannedBeans = new Food({
+export const cannedBeans = new Food({
     title: 'Canned Beans',
     description: 'Hearty baked beans',
     space: 0.5,
@@ -84,7 +82,7 @@ const cannedBeans = new Food({
     expirationDate: 365 * 3,
 });
 
-const cannedCorn = new Food({
+export const cannedCorn = new Food({
     title: 'Canned Corn',
     description: 'Sweet corn kernels',
     space: 0.4,
@@ -94,7 +92,7 @@ const cannedCorn = new Food({
     expirationDate: 365 * 4,
 });
 
-const cannedChicken = new Food({
+export const cannedChicken = new Food({
     title: 'Canned Chicken',
     description: 'Shredded chicken in broth',
     space: 0.6,
@@ -104,7 +102,7 @@ const cannedChicken = new Food({
     expirationDate: 365 * 4,
 });
 
-const cannedBeefStew = new Food({
+export const cannedBeefStew = new Food({
     title: 'Canned Beef Stew (Large)',
     description: 'Thick beef stew, big can',
     space: 1.2,
@@ -114,7 +112,7 @@ const cannedBeefStew = new Food({
     expirationDate: 365 * 3,
 });
 
-const cannedBeefStewSmall = new Food({
+export const cannedBeefStewSmall = new Food({
     title: 'Canned Beef Stew (Small)',
     description: 'Small portion of beef stew',
     space: 0.7,
@@ -124,7 +122,7 @@ const cannedBeefStewSmall = new Food({
     expirationDate: 365 * 3,
 });
 
-const sardinesInOil = new Food({
+export const sardinesInOil = new Food({
     title: 'Sardines in Oil',
     description: 'Oily fish, rich in fat',
     space: 0.3,
@@ -134,7 +132,7 @@ const sardinesInOil = new Food({
     expirationDate: 365 * 2,
 });
 
-const cannedSalmon = new Food({
+export const cannedSalmon = new Food({
     title: 'Canned Salmon',
     description: 'Flaked salmon, protein-rich',
     space: 0.5,
@@ -144,7 +142,7 @@ const cannedSalmon = new Food({
     expirationDate: 365 * 3,
 });
 
-const fruitCocktail = new Food({
+export const fruitCocktail = new Food({
     title: 'Fruit Cocktail',
     description: 'Mixed canned fruits in syrup',
     space: 0.6,
@@ -154,7 +152,7 @@ const fruitCocktail = new Food({
     expirationDate: 365 * 2,
 });
 
-const condensedMilk = new Food({
+export const condensedMilk = new Food({
     title: 'Condensed Milk',
     description: 'Sweetened condensed milk',
     space: 0.4,
@@ -164,7 +162,7 @@ const condensedMilk = new Food({
     expirationDate: 365 * 5,
 });
 
-const tomatoSoup = new Food({
+export const tomatoSoup = new Food({
     title: 'Tomato Soup',
     description: 'Rich tomato soup',
     space: 0.8,
@@ -174,7 +172,7 @@ const tomatoSoup = new Food({
     expirationDate: 365 * 3,
 });
 
-const galetaClassic = new Food({
+export const galetaClassic = new Food({
     title: 'Galeta Classic',
     description: 'Sealed dry galetas, classic',
     space: 0.05,
@@ -184,7 +182,7 @@ const galetaClassic = new Food({
     expirationDate: 365 * 15,
 });
 
-const galetaProtein = new Food({
+export const galetaProtein = new Food({
     title: 'Galeta Protein',
     description: 'Galetas with added protein are more filling',
     space: 0.06,
@@ -194,7 +192,7 @@ const galetaProtein = new Food({
     expirationDate: 365 * 15,
 });
 
-const galetaCompact = new Food({
+export const galetaCompact = new Food({
     title: 'Galeta Compact',
     description: 'Compact, sealed portion, very light',
     space: 0.03,
@@ -204,7 +202,7 @@ const galetaCompact = new Food({
     expirationDate: 365 * 15,
 });
 
-const galetaHighCal = new Food({
+export const galetaHighCal = new Food({
     title: 'Galeta High-Cal',
     description: 'Calorie galetas in airtight packaging',
     space: 0.07,
@@ -214,7 +212,7 @@ const galetaHighCal = new Food({
     expirationDate: 365 * 15,
 });
 
-const galetaHoney = new Food({
+export const galetaHoney = new Food({
     title: 'Galeta Honey',
     description: 'Honey-filled galetas in a sealed container',
     space: 0.06,
@@ -224,7 +222,7 @@ const galetaHoney = new Food({
     expirationDate: 365 * 15,
 });
 
-const bottle0_5L = new Food({
+export const bottle0_5L = new Food({
     title: 'Bottle 0.5L',
     description: 'Small water bottle 0.5L',
     space: 0.10,
@@ -234,7 +232,7 @@ const bottle0_5L = new Food({
     expirationDate: 365 * 10,
 });
 
-const bottle1L = new Food({
+export const bottle1L = new Food({
     title: 'Bottle 1L',
     description: 'Water bottle 1L',
     space: 0.15,
@@ -244,7 +242,7 @@ const bottle1L = new Food({
     expirationDate: 365 * 10,
 });
 
-const bottle1_5L = new Food({
+export const bottle1_5L = new Food({
     title: 'Bottle 1.5L',
     description: 'Water bottle 1.5L',
     space: 0.20,
@@ -254,7 +252,7 @@ const bottle1_5L = new Food({
     expirationDate: 365 * 10,
 });
 
-const bottle2L = new Food({
+export const bottle2L = new Food({
     title: 'Bottle 2L',
     description: 'Big water bottle 2L',
     space: 0.25,
@@ -264,7 +262,7 @@ const bottle2L = new Food({
     expirationDate: 365 * 10,
 });
 
-const bottle3L = new Food({
+export const bottle3L = new Food({
     title: 'Bottle 3L',
     description: 'Large water container 3L',
     space: 0.35,
@@ -274,7 +272,7 @@ const bottle3L = new Food({
     expirationDate: 365 * 10,
 });
 
-const bottle4L = new Food({
+export const bottle4L = new Food({
     title: 'Bottle 4L',
     description: 'Very large water container 4L',
     space: 0.45,
@@ -284,7 +282,7 @@ const bottle4L = new Food({
     expirationDate: 365 * 10,
 });
 
-const bottle5L = new Food({
+export const bottle5L = new Food({
     title: 'Bottle 5L',
     description: 'Huge water canister 5L',
     space: 0.55,
@@ -294,7 +292,7 @@ const bottle5L = new Food({
     expirationDate: 365 * 10,
 });
 
-const axe = new Tool({
+export const axe = new Tool({
     title: 'Axe',
     description: 'Heavy axe for chopping wood/doors',
     space: 1.0,
@@ -305,7 +303,7 @@ const axe = new Tool({
     hardness: 70,
 });
 
-const hatchet = new Tool({
+export const hatchet = new Tool({
     title: 'Hatchet (Small Axe)',
     description: 'Small light axe, easier to carry',
     space: 0.6,
@@ -316,7 +314,7 @@ const hatchet = new Tool({
     hardness: 50,
 });
 
-const hammer = new Tool({
+export const hammer = new Tool({
     title: 'Hammer',
     description: 'Standard hammer, good for nails and blunt force',
     space: 0.8,
@@ -327,7 +325,7 @@ const hammer = new Tool({
     hardness: 65,
 });
 
-const sledgehammer = new Tool({
+export const sledgehammer = new Tool({
     title: 'Sledgehammer',
     description: 'Big heavy hammer for breaking stuff',
     space: 1.3,
@@ -338,7 +336,7 @@ const sledgehammer = new Tool({
     hardness: 75,
 });
 
-const wrench = new Tool({
+export const wrench = new Tool({
     title: 'Wrench',
     description: 'Fixed wrench for bolts',
     space: 0.6,
@@ -349,7 +347,7 @@ const wrench = new Tool({
     hardness: 60,
 });
 
-const adjustableWrench = new Tool({
+export const adjustableWrench = new Tool({
     title: 'Adjustable Wrench',
     description: 'One wrench fits many bolts',
     space: 0.7,
@@ -360,7 +358,7 @@ const adjustableWrench = new Tool({
     hardness: 62,
 });
 
-const knifeCombat = new Tool({
+export const knifeCombat = new Tool({
     title: 'Knife (Combat)',
     description: 'Sharp fixed blade, good for cutting and defense',
     space: 0.2,
@@ -371,7 +369,7 @@ const knifeCombat = new Tool({
     hardness: 40,
 });
 
-const foldingKnife = new Tool({
+export const foldingKnife = new Tool({
     title: 'Folding Knife',
     description: 'Small folding knife, light and handy',
     space: 0.1,
@@ -382,7 +380,7 @@ const foldingKnife = new Tool({
     hardness: 30,
 });
 
-const screwdriverFlat = new Tool({
+export const screwdriverFlat = new Tool({
     title: 'Screwdriver (Flat)',
     description: 'Flat-head screwdriver',
     space: 0.15,
@@ -393,7 +391,7 @@ const screwdriverFlat = new Tool({
     hardness: 30,
 });
 
-const screwdriverPhillips = new Tool({
+export const screwdriverPhillips = new Tool({
     title: 'Screwdriver (Phillips)',
     description: 'Phillips-head screwdriver',
     space: 0.15,
@@ -404,7 +402,7 @@ const screwdriverPhillips = new Tool({
     hardness: 30,
 });
 
-const pliers = new Tool({
+export const pliers = new Tool({
     title: 'Pliers',
     description: 'Useful for gripping and cutting wires',
     space: 0.25,
@@ -415,7 +413,7 @@ const pliers = new Tool({
     hardness: 40,
 });
 
-const crowbar = new Tool({
+export const crowbar = new Tool({
     title: 'Crowbar',
     description: 'Prying and levering tool',
     space: 1.0,
@@ -426,7 +424,7 @@ const crowbar = new Tool({
     hardness: 70,
 });
 
-const shovel = new Tool({
+export const shovel = new Tool({
     title: 'Shovel',
     description: 'Digging shovel, also for clearing debris',
     space: 1.2,
@@ -437,7 +435,7 @@ const shovel = new Tool({
     hardness: 60,
 });
 
-const swissKnife = new Tool({
+export const swissKnife = new Tool({
     title: 'Swiss Army Knife',
     description: 'Multi-blade pocket knife with tools',
     space: 0.08,
@@ -448,7 +446,7 @@ const swissKnife = new Tool({
     hardness: 25,
 });
 
-const multitool = new Tool({
+export const multitool = new Tool({
     title: 'Multitool',
     description: 'Modern multitool: pliers, blade, screwdriver etc.',
     space: 0.2,
@@ -459,7 +457,7 @@ const multitool = new Tool({
     hardness: 45,
 });
 
-const emptyCanSmall = new EmptyCan({
+export const emptyCanSmall = new EmptyCan({
     title: 'Empty Can (Small)',
     description: 'An empty small tin can',
     space: 0.1,
@@ -467,7 +465,7 @@ const emptyCanSmall = new EmptyCan({
     volume: 0.25,
 });
 
-const emptyCanLarge = new EmptyCan({
+export const emptyCanLarge = new EmptyCan({
     title: 'Empty Can (Large)',
     description: 'An empty large tin can',
     space: 0.2,
@@ -475,7 +473,7 @@ const emptyCanLarge = new EmptyCan({
     volume: 0.6,
 });
 
-const emptyBottle0_5L = new EmptyCan({
+export const emptyBottle0_5L = new EmptyCan({
     title: 'Empty Bottle 0.5L',
     description: 'Empty plastic bottle 0.5L',
     space: 0.08,
@@ -483,7 +481,7 @@ const emptyBottle0_5L = new EmptyCan({
     volume: 0.5,
 });
 
-const emptyBottle1L = new EmptyCan({
+export const emptyBottle1L = new EmptyCan({
     title: 'Empty Bottle 1L',
     description: 'Empty plastic bottle 1L',
     space: 0.12,
@@ -491,7 +489,7 @@ const emptyBottle1L = new EmptyCan({
     volume: 1,
 });
 
-const crushedPlasticBottle = new EmptyCan({
+export const crushedPlasticBottle = new EmptyCan({
     title: 'Crushed Plastic Bottle',
     description: 'Crumpled plastic bottle (garbage)',
     space: 0.03,
@@ -499,35 +497,35 @@ const crushedPlasticBottle = new EmptyCan({
     volume: 0.2,
 });
 
-const brokenGlass = new Item({
+export const brokenGlass = new Item({
     title: 'Broken Glass',
     description: 'Glass fragments, fragile debris',
     space: 0.2,
     weight: 0.2,
 });
 
-const scrapMetal = new Item({
+export const scrapMetal = new Item({
     title: 'Scrap Metal',
     description: 'Scrap metal, can be resold/recycled',
     space: 0.6,
     weight: 1.2,
 });
 
-const plasticBag = new Item({
+export const plasticBag = new Item({
     title: 'Plastic Bag (empty)',
     description: 'Empty plastic bag',
     space: 0.02,
     weight: 0.01,
 });
 
-const cardboardBox = new Item({
+export const cardboardBox = new Item({
     title: 'Cardboard Box (flattened)',
     description: 'Folded cardboard box (garbage)',
     space: 0.1,
     weight: 0.05,
 });
 
-const emptyCanisterSmall = new Canister({
+export const emptyCanisterSmall = new Canister({
     title: 'Empty Canister 2L',
     description: 'Empty 2L water canister',
     space: 0.3,
@@ -535,7 +533,7 @@ const emptyCanisterSmall = new Canister({
     volume: 2,
 });
 
-const emptyCanisterLarge = new Canister({
+export const emptyCanisterLarge = new Canister({
     title: 'Empty Canister 5L',
     description: 'Empty 5L water canister',
     space: 0.5,
@@ -543,7 +541,7 @@ const emptyCanisterLarge = new Canister({
     volume: 5,
 });
 
-const canister15L = new Canister({
+export const canister15L = new Canister({
     title: 'Canister 15L',
     description: 'Plastic canister 15 liters',
     space: 0.9,
@@ -551,7 +549,7 @@ const canister15L = new Canister({
     volume: 15,
 });
 
-const canister20L = new Canister({
+export const canister20L = new Canister({
     title: 'Canister 20L',
     description: 'Plastic canister 20 liters',
     space: 1.1,
@@ -559,7 +557,7 @@ const canister20L = new Canister({
     volume: 20,
 });
 
-const canister25L = new Canister({
+export const canister25L = new Canister({
     title: 'Canister 25L',
     description: 'Sturdy canister 25 liters',
     space: 1.3,
@@ -567,7 +565,7 @@ const canister25L = new Canister({
     volume: 25,
 });
 
-const canister35L = new Canister({
+export const canister35L = new Canister({
     title: 'Canister 35L',
     description: 'Big canister 35 liters',
     space: 1.6,
@@ -575,7 +573,7 @@ const canister35L = new Canister({
     volume: 35,
 });
 
-const barrel50L = new Canister({
+export const barrel50L = new Canister({
     title: 'Barrel 50L',
     description: 'Metal barrel 50 liters (empty)',
     space: 2.2,
@@ -583,7 +581,7 @@ const barrel50L = new Canister({
     volume: 50,
 });
 
-const barrel100L = new Canister({
+export const barrel100L = new Canister({
     title: 'Barrel 100L',
     description: 'Large metal drum 100 liters (empty)',
     space: 3.5,
@@ -591,7 +589,7 @@ const barrel100L = new Canister({
     volume: 100,
 });
 
-const emptyCanTiny = new EmptyCan({
+export const emptyCanTiny = new EmptyCan({
     title: 'Empty Can (tiny)',
     description: 'Very small empty can',
     space: 0.05,
@@ -599,7 +597,7 @@ const emptyCanTiny = new EmptyCan({
     volume: 0.15,
 });
 
-const emptyCanPile = new EmptyCan({
+export const emptyCanPile = new EmptyCan({
     title: 'Pile of Empty Cans',
     description: 'Several crushed empty cans stuck together',
     space: 0.4,
@@ -607,7 +605,7 @@ const emptyCanPile = new EmptyCan({
     volume: 1.5,
 });
 
-const emptyBottleLarge = new EmptyCan({
+export const emptyBottleLarge = new EmptyCan({
     title: 'Empty Bottle Large',
     description: 'Big empty plastic bottle',
     space: 0.25,
@@ -615,7 +613,7 @@ const emptyBottleLarge = new EmptyCan({
     volume: 2,
 });
 
-const emptyBottleCrushed = new EmptyCan({
+export const emptyBottleCrushed = new EmptyCan({
     title: 'Crushed Empty Bottle',
     description: 'Crushed plastic bottle, small volume',
     space: 0.03,
@@ -623,77 +621,77 @@ const emptyBottleCrushed = new EmptyCan({
     volume: 0.3,
 });
 
-const scrapMetalSmall = new Item({
+export const scrapMetalSmall = new Item({
     title: 'Scrap Metal (small)',
     description: 'Small pieces of metal, rusty',
     space: 0.5,
     weight: 1.5,
 });
 
-const scrapMetalLarge = new Item({
+export const scrapMetalLarge = new Item({
     title: 'Scrap Metal (large)',
     description: 'Bigger metal scrap, heavy',
     space: 1.8,
     weight: 6.0,
 });
 
-const metalPipe = new Item({
+export const metalPipe = new Item({
     title: 'Metal Pipe',
     description: 'Hollow metal pipe, useful for crafting',
     space: 1.2,
     weight: 3.0,
 });
 
-const metalBoltPile = new Item({
+export const metalBoltPile = new Item({
     title: 'Pile of Bolts',
     description: 'Assorted bolts and screws',
     space: 0.15,
     weight: 0.4,
 });
 
-const plasticScrapLarge = new Item({
+export const plasticScrapLarge = new Item({
     title: 'Plastic Scrap (large)',
     description: 'Sheets of plastic and broken containers',
     space: 1.0,
     weight: 0.8,
 });
 
-const plasticBagPile = new Item({
+export const plasticBagPile = new Item({
     title: 'Plastic Bag Pile',
     description: 'Bundle of empty plastic bags',
     space: 0.12,
     weight: 0.05,
 });
 
-const cardboardBundle = new Item({
+export const cardboardBundle = new Item({
     title: 'Cardboard Bundle',
     description: 'Crushed cardboard pieces',
     space: 0.6,
     weight: 0.3,
 });
 
-const glassBottleBroken = new Item({
+export const glassBottleBroken = new Item({
     title: 'Broken Glass Bottles',
     description: 'Shards and broken bottles (dangerous)',
     space: 0.4,
     weight: 0.9,
 });
 
-const tinFragments = new Item({
+export const tinFragments = new Item({
     title: 'Tin Fragments',
     description: 'Sharp tin fragments from cans',
     space: 0.2,
     weight: 0.25,
 });
 
-const canLidPile = new Item({
+export const canLidPile = new Item({
     title: 'Pile of Can Lids',
     description: 'Loose lids from opened cans',
     space: 0.08,
     weight: 0.12,
 });
 
-const emptyCanister2L = new Canister({
+export const emptyCanister2L = new Canister({
     title: 'Empty Canister 2L',
     description: 'Small empty canister 2L',
     space: 0.35,
@@ -701,7 +699,7 @@ const emptyCanister2L = new Canister({
     volume: 2,
 });
 
-const palletSmall = new Container({
+export const palletSmall = new Container({
     title: 'Pallet Small',
     description: 'Wooden pallet small',
     space: 1.0,
@@ -711,7 +709,7 @@ const palletSmall = new Container({
     inventory: {},
 });
 
-const palletLarge = new Container({
+export const palletLarge = new Container({
     title: 'Pallet Large',
     description: 'Large pallet',
     space: 2.0,
@@ -721,7 +719,7 @@ const palletLarge = new Container({
     inventory: {},
 });
 
-const woodenCrateSmall = new Container({
+export const woodenCrateSmall = new Container({
     title: 'Wooden Crate (Small)',
     description: 'Small wooden box',
     space: 0.8,
@@ -731,7 +729,7 @@ const woodenCrateSmall = new Container({
     inventory: {},
 });
 
-const woodenCrateLarge = new Container({
+export const woodenCrateLarge = new Container({
     title: 'Wooden Crate (Large)',
     description: 'Large wooden box',
     space: 1.6,
@@ -741,7 +739,7 @@ const woodenCrateLarge = new Container({
     inventory: {},
 });
 
-const metalChest = new Container({
+export const metalChest = new Container({
     title: 'Metal Chest',
     description: 'Hard metal chest',
     space: 1.2,
@@ -751,7 +749,7 @@ const metalChest = new Container({
     inventory: {},
 });
 
-const lockerSmall = new Container({
+export const lockerSmall = new Container({
     title: 'Locker Small',
     description: 'A small locker with a door',
     space: 0.9,
@@ -761,7 +759,7 @@ const lockerSmall = new Container({
     inventory: {},
 });
 
-const lockerLarge = new Container({
+export const lockerLarge = new Container({
     title: 'Locker Large',
     description: 'Tall locker cabinet',
     space: 2.0,
@@ -771,7 +769,7 @@ const lockerLarge = new Container({
     inventory: {},
 });
 
-const shelfSingle = new Container({
+export const shelfSingle = new Container({
     title: 'Shelf Single',
     description: 'One metal shelf',
     space: 0.6,
@@ -781,7 +779,7 @@ const shelfSingle = new Container({
     inventory: {},
 });
 
-const shelfDouble = new Container({
+export const shelfDouble = new Container({
     title: 'Shelf Double',
     description: 'Two shelves, medium size',
     space: 1.0,
@@ -791,7 +789,7 @@ const shelfDouble = new Container({
     inventory: {},
 });
 
-const shelfIndustrial = new Container({
+export const shelfIndustrial = new Container({
     title: 'Industrial Shelf',
     description: 'Industrial shelving unit',
     space: 3.0,
@@ -801,7 +799,7 @@ const shelfIndustrial = new Container({
     inventory: {},
 });
 
-const boxSmall = new Container({
+export const boxSmall = new Container({
     title: 'Box Small',
     description: 'The cardboard box is small',
     space: 0.2,
@@ -811,7 +809,7 @@ const boxSmall = new Container({
     inventory: {},
 });
 
-const boxMedium = new Container({
+export const boxMedium = new Container({
     title: 'Box Medium',
     description: 'Medium cardboard box',
     space: 0.5,
@@ -821,7 +819,7 @@ const boxMedium = new Container({
     inventory: {},
 });
 
-const boxLarge = new Container({
+export const boxLarge = new Container({
     title: 'Box Large',
     description: 'Large cardboard box',
     space: 1.0,
@@ -831,7 +829,7 @@ const boxLarge = new Container({
     inventory: {},
 });
 
-const storageRack = new Container({
+export const storageRack = new Container({
     title: 'Storage Rack',
     description: 'Modular shelving with compartments',
     space: 2.5,
@@ -841,7 +839,7 @@ const storageRack = new Container({
     inventory: {},
 });
 
-const drawerUnit = new Container({
+export const drawerUnit = new Container({
     title: 'Drawer Unit',
     description: 'Chest of drawers',
     space: 1.4,
@@ -851,7 +849,7 @@ const drawerUnit = new Container({
     inventory: {},
 });
 
-const cabinetLocker = new Container({
+export const cabinetLocker = new Container({
     title: 'Cabinet Locker',
     description: 'Closed cabinet with shelves',
     space: 1.8,
@@ -861,7 +859,7 @@ const cabinetLocker = new Container({
     inventory: {},
 });
 
-const marsPebbleTiny = new Item({
+export const marsPebbleTiny = new Item({
     title: 'Mars Pebble (Tiny)',
     description: 'A small Martian pebble',
     space: 0.02,
@@ -869,7 +867,7 @@ const marsPebbleTiny = new Item({
 });
 marsPebbleTiny.ironYield = 0.1;
 
-const marsPebbleSmall = new Item({
+export const marsPebbleSmall = new Item({
     title: 'Mars Pebble (Small)',
     description: 'A small stone with a small iron content',
     space: 0.04,
@@ -877,7 +875,7 @@ const marsPebbleSmall = new Item({
 });
 marsPebbleSmall.ironYield = 0.3;
 
-const marsPebbleMedium = new Item({
+export const marsPebbleMedium = new Item({
     title: 'Mars Pebble (Medium)',
     description: 'Medium stone, can be melted down',
     space: 0.08,
@@ -885,7 +883,7 @@ const marsPebbleMedium = new Item({
 });
 marsPebbleMedium.ironYield = 0.8;
 
-const marsPebbleLarge = new Item({
+export const marsPebbleLarge = new Item({
     title: 'Mars Rock (Large)',
     description: 'Big stone, lots of minerals',
     space: 0.2,
@@ -893,7 +891,7 @@ const marsPebbleLarge = new Item({
 });
 marsPebbleLarge.ironYield = 2.2;
 
-const ironNoduleSmall = new Item({
+export const ironNoduleSmall = new Item({
     title: 'Iron Nodule (Small)',
     description: 'A small glandular nodule',
     space: 0.1,
@@ -901,7 +899,7 @@ const ironNoduleSmall = new Item({
 });
 ironNoduleSmall.ironYield = 4;
 
-const ironNoduleMedium = new Item({
+export const ironNoduleMedium = new Item({
     title: 'Iron Nodule (Medium)',
     description: 'Medium iron piece, good for processing',
     space: 0.25,
@@ -909,7 +907,7 @@ const ironNoduleMedium = new Item({
 });
 ironNoduleMedium.ironYield = 10;
 
-const ironNoduleLarge = new Item({
+export const ironNoduleLarge = new Item({
     title: 'Iron Nodule (Large)',
     description: 'A large lump of iron ore',
     space: 0.7,
@@ -917,7 +915,7 @@ const ironNoduleLarge = new Item({
 });
 ironNoduleLarge.ironYield = 28;
 
-const hematiteChunk = new Item({
+export const hematiteChunk = new Item({
     title: 'Hematite Chunk',
     description: 'Hematite piece (rich in iron)',
     space: 0.3,
@@ -925,7 +923,7 @@ const hematiteChunk = new Item({
 });
 hematiteChunk.ironYield = 8;
 
-const basaltPieceSmall = new Item({
+export const basaltPieceSmall = new Item({
     title: 'Basalt Piece (Small)',
     description: 'Basalt chips, low in iron',
     space: 0.06,
@@ -933,7 +931,7 @@ const basaltPieceSmall = new Item({
 });
 basaltPieceSmall.ironYield = 0.2;
 
-const basaltPieceLarge = new Item({
+export const basaltPieceLarge = new Item({
     title: 'Basalt Piece (Large)',
     description: 'Large basalt fragment',
     space: 0.4,
@@ -941,7 +939,7 @@ const basaltPieceLarge = new Item({
 });
 basaltPieceLarge.ironYield = 1.0;
 
-const meteoriteFragment = new Item({
+export const meteoriteFragment = new Item({
     title: 'Meteorite Fragment',
     description: 'The meteorite fragment is valuable and contains rare metals.',
     space: 0.15,
@@ -950,7 +948,7 @@ const meteoriteFragment = new Item({
 meteoriteFragment.ironYield = 6;
 meteoriteFragment.rare = true;
 
-const glassyShard = new Item({
+export const glassyShard = new Item({
     title: 'Glassy Shard',
     description: 'A glassy piece, sharp, of volcanic glass',
     space: 0.05,
@@ -958,7 +956,7 @@ const glassyShard = new Item({
 });
 glassyShard.ironYield = 0.1;
 
-const regolithDustSmall = new Item({
+export const regolithDustSmall = new Item({
     title: 'Regolith Dust (Small)',
     description: 'A packet of Martian dust (regolith), fine material',
     space: 0.02,
@@ -966,7 +964,7 @@ const regolithDustSmall = new Item({
 });
 regolithDustSmall.ironYield = 0.05;
 
-const regolithBag = new Item({
+export const regolithBag = new Item({
     title: 'Regolith Bag (1kg)',
     description: '1 kg bag of Martian sand/dust',
     space: 0.12,
@@ -974,7 +972,7 @@ const regolithBag = new Item({
 });
 regolithBag.ironYield = 0.3;
 
-const regolithSackLarge = new Item({
+export const regolithSackLarge = new Item({
     title: 'Regolith Sack (10kg)',
     description: 'A large bag of Martian sand (~10 kg)',
     space: 0.9,
@@ -982,7 +980,7 @@ const regolithSackLarge = new Item({
 });
 regolithSackLarge.ironYield = 3;
 
-const sandFine = new Item({
+export const sandFine = new Item({
     title: 'Martian Fine Sand',
     description: 'Fine Martian sand, good for filtering',
     space: 0.2,
@@ -990,7 +988,7 @@ const sandFine = new Item({
 });
 sandFine.ironYield = 0.6;
 
-const sandCoarse = new Item({
+export const sandCoarse = new Item({
     title: 'Martian Coarse Sand',
     description: 'Coarse-grained Martian sand',
     space: 0.25,
@@ -998,7 +996,7 @@ const sandCoarse = new Item({
 });
 sandCoarse.ironYield = 0.8;
 
-const rockBoulderSmall = new Item({
+export const rockBoulderSmall = new Item({
     title: 'Rock Boulder (Small)',
     description: 'A small boulder, heavy and bulky',
     space: 1.6,
@@ -1006,7 +1004,7 @@ const rockBoulderSmall = new Item({
 });
 rockBoulderSmall.ironYield = 20;
 
-const rockBoulderLarge = new Item({
+export const rockBoulderLarge = new Item({
     title: 'Rock Boulder (Large)',
     description: 'Large boulder, requires equipment to move',
     space: 4.0,

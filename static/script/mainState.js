@@ -1,5 +1,6 @@
 import { State } from "./gameStats.js";
 import { MainModule, StorageModule, GreenHouseModule, LivingModule, ReactorModule, CorridorModule, CafeteriaModule } from "./stateModules.js";
+import { cannedTuna, botleOfWater, cannedBeans, cannedBeefStew, cannedChicken, cannedCorn } from "./items.js";
 
 export let mainState = new State();
 
@@ -16,7 +17,9 @@ const mainModule = new MainModule({
 	energyConsumption: 2000,
 	moinsture: 20,
 	nextLocation: [1],
-	inventory: {},
+	inventory: {
+		cannedTuna: 7,
+	},
 });
 
 const cafeteriaModule = new CafeteriaModule({
@@ -31,7 +34,9 @@ const cafeteriaModule = new CafeteriaModule({
 	energyConsumption: 2700,
 	moinsture: 23,
 	nextLocation: [1, 7, 3, 11],
-	inventory: {},
+	inventory: {
+		cannedTuna: 7,
+	},
 })
 
 const mainCorridor = new CorridorModule({
