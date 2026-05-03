@@ -459,3 +459,245 @@ const multitool = new Tool({
     hardness: 45,
 });
 
+const emptyCanSmall = new EmptyCan({
+    title: 'Empty Can (Small)',
+    description: 'An empty small tin can',
+    space: 0.1,
+    weight: 0.05,
+    volume: 0.25,
+});
+
+const emptyCanLarge = new EmptyCan({
+    title: 'Empty Can (Large)',
+    description: 'An empty large tin can',
+    space: 0.2,
+    weight: 0.12,
+    volume: 0.6,
+});
+
+const emptyBottle0_5L = new EmptyCan({
+    title: 'Empty Bottle 0.5L',
+    description: 'Empty plastic bottle 0.5L',
+    space: 0.08,
+    weight: 0.03,
+    volume: 0.5,
+});
+
+const emptyBottle1L = new EmptyCan({
+    title: 'Empty Bottle 1L',
+    description: 'Empty plastic bottle 1L',
+    space: 0.12,
+    weight: 0.05,
+    volume: 1,
+});
+
+const crushedPlasticBottle = new EmptyCan({
+    title: 'Crushed Plastic Bottle',
+    description: 'Crumpled plastic bottle (garbage)',
+    space: 0.03,
+    weight: 0.01,
+    volume: 0.2,
+});
+
+const brokenGlass = new Item({
+    title: 'Broken Glass',
+    description: 'Glass fragments, fragile debris',
+    space: 0.2,
+    weight: 0.2,
+});
+
+const scrapMetal = new Item({
+    title: 'Scrap Metal',
+    description: 'Scrap metal, can be resold/recycled',
+    space: 0.6,
+    weight: 1.2,
+});
+
+const plasticBag = new Item({
+    title: 'Plastic Bag (empty)',
+    description: 'Empty plastic bag',
+    space: 0.02,
+    weight: 0.01,
+});
+
+const cardboardBox = new Item({
+    title: 'Cardboard Box (flattened)',
+    description: 'Folded cardboard box (garbage)',
+    space: 0.1,
+    weight: 0.05,
+});
+
+const emptyCanisterSmall = new Canister({
+    title: 'Empty Canister 2L',
+    description: 'Empty 2L water canister',
+    space: 0.3,
+    weight: 0.2,
+    volume: 2,
+});
+
+const emptyCanisterLarge = new Canister({
+    title: 'Empty Canister 5L',
+    description: 'Empty 5L water canister',
+    space: 0.5,
+    weight: 0.35,
+    volume: 5,
+});
+
+const canister15L = new Canister({
+    title: 'Canister 15L',
+    description: 'Plastic canister 15 liters',
+    space: 0.9,
+    weight: 0.9,
+    volume: 15,
+});
+
+const canister20L = new Canister({
+    title: 'Canister 20L',
+    description: 'Plastic canister 20 liters',
+    space: 1.1,
+    weight: 1.2,
+    volume: 20,
+});
+
+const canister25L = new Canister({
+    title: 'Canister 25L',
+    description: 'Sturdy canister 25 liters',
+    space: 1.3,
+    weight: 1.6,
+    volume: 25,
+});
+
+const canister35L = new Canister({
+    title: 'Canister 35L',
+    description: 'Big canister 35 liters',
+    space: 1.6,
+    weight: 2.0,
+    volume: 35,
+});
+
+const barrel50L = new Canister({
+    title: 'Barrel 50L',
+    description: 'Metal barrel 50 liters (empty)',
+    space: 2.2,
+    weight: 6.0,
+    volume: 50,
+});
+
+const barrel100L = new Canister({
+    title: 'Barrel 100L',
+    description: 'Large metal drum 100 liters (empty)',
+    space: 3.5,
+    weight: 10.0,
+    volume: 100,
+});
+
+const emptyCanTiny = new EmptyCan({
+    title: 'Empty Can (tiny)',
+    description: 'Very small empty can',
+    space: 0.05,
+    weight: 0.02,
+    volume: 0.15,
+});
+
+const emptyCanPile = new EmptyCan({
+    title: 'Pile of Empty Cans',
+    description: 'Several crushed empty cans stuck together',
+    space: 0.4,
+    weight: 0.6,
+    volume: 1.5,
+});
+
+const emptyBottleLarge = new EmptyCan({
+    title: 'Empty Bottle Large',
+    description: 'Big empty plastic bottle',
+    space: 0.25,
+    weight: 0.08,
+    volume: 2,
+});
+
+const emptyBottleCrushed = new EmptyCan({
+    title: 'Crushed Empty Bottle',
+    description: 'Crushed plastic bottle, small volume',
+    space: 0.03,
+    weight: 0.02,
+    volume: 0.3,
+});
+
+const scrapMetalSmall = new Item({
+    title: 'Scrap Metal (small)',
+    description: 'Small pieces of metal, rusty',
+    space: 0.5,
+    weight: 1.5,
+});
+
+const scrapMetalLarge = new Item({
+    title: 'Scrap Metal (large)',
+    description: 'Bigger metal scrap, heavy',
+    space: 1.8,
+    weight: 6.0,
+});
+
+const metalPipe = new Item({
+    title: 'Metal Pipe',
+    description: 'Hollow metal pipe, useful for crafting',
+    space: 1.2,
+    weight: 3.0,
+});
+
+const metalBoltPile = new Item({
+    title: 'Pile of Bolts',
+    description: 'Assorted bolts and screws',
+    space: 0.15,
+    weight: 0.4,
+});
+
+const plasticScrapLarge = new Item({
+    title: 'Plastic Scrap (large)',
+    description: 'Sheets of plastic and broken containers',
+    space: 1.0,
+    weight: 0.8,
+});
+
+const plasticBagPile = new Item({
+    title: 'Plastic Bag Pile',
+    description: 'Bundle of empty plastic bags',
+    space: 0.12,
+    weight: 0.05,
+});
+
+const cardboardBundle = new Item({
+    title: 'Cardboard Bundle',
+    description: 'Crushed cardboard pieces',
+    space: 0.6,
+    weight: 0.3,
+});
+
+const glassBottleBroken = new Item({
+    title: 'Broken Glass Bottles',
+    description: 'Shards and broken bottles (dangerous)',
+    space: 0.4,
+    weight: 0.9,
+});
+
+const tinFragments = new Item({
+    title: 'Tin Fragments',
+    description: 'Sharp tin fragments from cans',
+    space: 0.2,
+    weight: 0.25,
+});
+
+const canLidPile = new Item({
+    title: 'Pile of Can Lids',
+    description: 'Loose lids from opened cans',
+    space: 0.08,
+    weight: 0.12,
+});
+
+const emptyCanister2L = new Canister({
+    title: 'Empty Canister 2L',
+    description: 'Small empty canister 2L',
+    space: 0.35,
+    weight: 0.18,
+    volume: 2,
+});
+
