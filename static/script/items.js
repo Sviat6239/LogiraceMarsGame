@@ -294,3 +294,168 @@ const bottle5L = new Food({
     expirationDate: 365 * 10,
 });
 
+const axe = new Tool({
+    title: 'Axe',
+    description: 'Heavy axe for chopping wood/doors',
+    space: 1.0,
+    weight: 3.5,
+    damage: 25,
+    durability: 80,
+    sharpness: 60,
+    hardness: 70,
+});
+
+const hatchet = new Tool({
+    title: 'Hatchet (Small Axe)',
+    description: 'Small light axe, easier to carry',
+    space: 0.6,
+    weight: 1.2,
+    damage: 14,
+    durability: 60,
+    sharpness: 55,
+    hardness: 50,
+});
+
+const hammer = new Tool({
+    title: 'Hammer',
+    description: 'Standard hammer, good for nails and blunt force',
+    space: 0.8,
+    weight: 1.1,
+    damage: 10,
+    durability: 85,
+    sharpness: 5,
+    hardness: 65,
+});
+
+const sledgehammer = new Tool({
+    title: 'Sledgehammer',
+    description: 'Big heavy hammer for breaking stuff',
+    space: 1.3,
+    weight: 5.0,
+    damage: 35,
+    durability: 70,
+    sharpness: 2,
+    hardness: 75,
+});
+
+const wrench = new Tool({
+    title: 'Wrench',
+    description: 'Fixed wrench for bolts',
+    space: 0.6,
+    weight: 0.9,
+    damage: 6,
+    durability: 90,
+    sharpness: 1,
+    hardness: 60,
+});
+
+const adjustableWrench = new Tool({
+    title: 'Adjustable Wrench',
+    description: 'One wrench fits many bolts',
+    space: 0.7,
+    weight: 1.2,
+    damage: 7,
+    durability: 80,
+    sharpness: 1,
+    hardness: 62,
+});
+
+const knifeCombat = new Tool({
+    title: 'Knife (Combat)',
+    description: 'Sharp fixed blade, good for cutting and defense',
+    space: 0.2,
+    weight: 0.25,
+    damage: 18,
+    durability: 50,
+    sharpness: 90,
+    hardness: 40,
+});
+
+const foldingKnife = new Tool({
+    title: 'Folding Knife',
+    description: 'Small folding knife, light and handy',
+    space: 0.1,
+    weight: 0.12,
+    damage: 8,
+    durability: 40,
+    sharpness: 70,
+    hardness: 30,
+});
+
+const screwdriverFlat = new Tool({
+    title: 'Screwdriver (Flat)',
+    description: 'Flat-head screwdriver',
+    space: 0.15,
+    weight: 0.15,
+    damage: 2,
+    durability: 60,
+    sharpness: 5,
+    hardness: 30,
+});
+
+const screwdriverPhillips = new Tool({
+    title: 'Screwdriver (Phillips)',
+    description: 'Phillips-head screwdriver',
+    space: 0.15,
+    weight: 0.16,
+    damage: 5,
+    durability: 60,
+    sharpness: 5,
+    hardness: 30,
+});
+
+const pliers = new Tool({
+    title: 'Pliers',
+    description: 'Useful for gripping and cutting wires',
+    space: 0.25,
+    weight: 0.35,
+    damage: 4,
+    durability: 75,
+    sharpness: 10,
+    hardness: 40,
+});
+
+const crowbar = new Tool({
+    title: 'Crowbar',
+    description: 'Prying and levering tool',
+    space: 1.0,
+    weight: 2.2,
+    damage: 20,
+    durability: 85,
+    sharpness: 2,
+    hardness: 70,
+});
+
+const shovel = new Tool({
+    title: 'Shovel',
+    description: 'Digging shovel, also for clearing debris',
+    space: 1.2,
+    weight: 2.8,
+    damage: 12,
+    durability: 80,
+    sharpness: 10,
+    hardness: 60,
+});
+
+const swissKnife = new Tool({
+    title: 'Swiss Army Knife',
+    description: 'Multi-blade pocket knife with tools',
+    space: 0.08,
+    weight: 0.09,
+    damage: 6,
+    durability: 45,
+    sharpness: 65,
+    hardness: 25,
+});
+
+const multitool = new Tool({
+    title: 'Multitool',
+    description: 'Modern multitool: pliers, blade, screwdriver etc.',
+    space: 0.2,
+    weight: 0.3,
+    damage: 9,
+    durability: 70,
+    sharpness: 40,
+    hardness: 45,
+});
+
