@@ -70,7 +70,7 @@ export default class StateModule {
         this.energyConsumption = energyConsumption;
         this.moinsture = moinsture;
         this.nextLocation = nextLocation;
-        this.invetory = inventory;
+        this.inventory = inventory;
     }
 }
 

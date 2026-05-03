@@ -1,42 +1,90 @@
 import { mainState } from "./mainState.js";
 import { player } from "./player.js";
 
-document.addEventListener("DOMContentLoaded", () => {
+document.addEventListener("DOMContentLoaded", function () {
 
-    let inventoryIsOpened = false;
+    let invOpen = false;
 
-    const location = document.querySelector('.location');
-    const description = document.querySelector('.description');
-    const buttons = document.querySelector('.moveBtn');
+    const loc = document.querySelector(".location");
+    const desc = document.querySelector(".description");
+    const btns = document.querySelector(".moveBtn");
 
-    const inventoryBtn = document.querySelector('.inventoryBtn');
-    const inventoryPanel = document.querySelector('.inventoryPanel');
+    const invBtn = document.querySelector(".inventoryBtn");
+    const invPanel = document.querySelector(".inventoryPanel");
+
+    const locInvDiv = document.querySelector(".locationInventory");
+    const playerInvDiv = document.querySelector(".playerInventory");
 
     player.location = mainState.modules[0];
 
     function update() {
-        location.textContent = player.location.title;
-        description.textContent = player.location.description;
 
-        buttons.innerHTML = "";
+        loc.textContent = player.location.title;
+        desc.textContent = player.location.description;
+
+        btns.innerHTML = "";
 
         for (let i = 0; i < player.location.nextLocation.length; i++) {
-            let index = player.location.nextLocation[i];
-            let nextLocation = mainState.modules[index];
 
-            let btn = document.createElement("button");
-            btn.textContent = nextLocation.title;
+            let idx = player.location.nextLocation[i];
+            let next = mainState.modules[idx];
 
-            btn.onclick = function () {
-                player.location = nextLocation;
+            let b = document.createElement("button");
+            b.textContent = next.title;
+
+            b.onclick = function () {
+                player.location = next;
                 update();
             };
 
-            buttons.appendChild(btn);
+            btns.appendChild(b);
+        }
+
+        locInvDiv.innerHTML = "<h3>Локація</h3>";
+
+        let items = player.location.inventory || player.location.invetory || [];
+
+        if (items.length === 0) {
+            locInvDiv.innerHTML += "<p>Нічого немає</p>";
+        } else {
+            for (let i = 0; i < items.length; i++) {
+
+                let it = items[i];
+
+                let p = document.createElement("p");
+                p.textContent = it.title + " ";
+
+                let pickBtn = document.createElement("button");
+                pickBtn.textContent = "Взяти";
+
+                pickBtn.onclick = function () {
+                    player.pickUp(it, player.location);
+                    update();
+                };
+
+                p.appendChild(pickBtn);
+                locInvDiv.appendChild(p);
+            }
+        }
+
+        playerInvDiv.innerHTML = "<h3>Інвентарь</h3>";
+
+        if (player.inventory.length === 0) {
+            playerInvDiv.innerHTML += "<p>Пусто</p>";
+        } else {
+            for (let i = 0; i < player.inventory.length; i++) {
+
+                let it = player.inventory[i];
+
+                let p = document.createElement("p");
+                p.textContent = it.title;
+
+                playerInvDiv.appendChild(p);
+            }
         }
     }
 
-    function allOxygen() {
+    function calcOxygen() {
         mainState.oxygen = 0;
 
         for (let i = 0; i < mainState.modules.length; i++) {
@@ -44,7 +92,7 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     }
 
-    function allAirPollution() {
+    function calcPollution() {
         mainState.airPollution = 0;
 
         for (let i = 0; i < mainState.modules.length; i++) {
@@ -53,33 +101,25 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     function tick() {
+
         mainState.modules[8].oxygen += 0.01;
         mainState.modules[9].oxygen += 0.01;
 
         player.location.oxygen -= 0.01;
         player.location.airPollution += 0.01;
 
-        allOxygen();
-        allAirPollution();
-
-        console.log(mainState.oxygen);
-        console.log(mainState.airPollution);
+        calcOxygen();
+        calcPollution();
 
         update();
     }
 
-    inventoryPanel.classList.add('hidden');
+    invPanel.classList.add("hidden");
 
-    inventoryBtn.onclick = function () {
-        inventoryIsOpened = !inventoryIsOpened;
-
-        if (inventoryIsOpened) {
-            inventoryPanel.classList.remove('hidden');
-        } else {
-            inventoryPanel.classList.add('hidden');
-        }
+    invBtn.onclick = function () {
+        invOpen = !invOpen;
+        invPanel.classList.toggle("hidden", !invOpen);
     };
-
 
     update();
     setInterval(tick, 1000);
