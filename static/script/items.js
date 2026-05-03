@@ -861,3 +861,156 @@ const cabinetLocker = new Container({
     inventory: {},
 });
 
+const marsPebbleTiny = new Item({
+    title: 'Mars Pebble (Tiny)',
+    description: 'A small Martian pebble',
+    space: 0.02,
+    weight: 0.03,
+});
+marsPebbleTiny.ironYield = 0.1;
+
+const marsPebbleSmall = new Item({
+    title: 'Mars Pebble (Small)',
+    description: 'A small stone with a small iron content',
+    space: 0.04,
+    weight: 0.06,
+});
+marsPebbleSmall.ironYield = 0.3;
+
+const marsPebbleMedium = new Item({
+    title: 'Mars Pebble (Medium)',
+    description: 'Medium stone, can be melted down',
+    space: 0.08,
+    weight: 0.16,
+});
+marsPebbleMedium.ironYield = 0.8;
+
+const marsPebbleLarge = new Item({
+    title: 'Mars Rock (Large)',
+    description: 'Big stone, lots of minerals',
+    space: 0.2,
+    weight: 0.6,
+});
+marsPebbleLarge.ironYield = 2.2;
+
+const ironNoduleSmall = new Item({
+    title: 'Iron Nodule (Small)',
+    description: 'A small glandular nodule',
+    space: 0.1,
+    weight: 0.4,
+});
+ironNoduleSmall.ironYield = 4;
+
+const ironNoduleMedium = new Item({
+    title: 'Iron Nodule (Medium)',
+    description: 'Medium iron piece, good for processing',
+    space: 0.25,
+    weight: 1.1,
+});
+ironNoduleMedium.ironYield = 10;
+
+const ironNoduleLarge = new Item({
+    title: 'Iron Nodule (Large)',
+    description: 'A large lump of iron ore',
+    space: 0.7,
+    weight: 3.5,
+});
+ironNoduleLarge.ironYield = 28;
+
+const hematiteChunk = new Item({
+    title: 'Hematite Chunk',
+    description: 'Hematite piece (rich in iron)',
+    space: 0.3,
+    weight: 0.9,
+});
+hematiteChunk.ironYield = 8;
+
+const basaltPieceSmall = new Item({
+    title: 'Basalt Piece (Small)',
+    description: 'Basalt chips, low in iron',
+    space: 0.06,
+    weight: 0.12,
+});
+basaltPieceSmall.ironYield = 0.2;
+
+const basaltPieceLarge = new Item({
+    title: 'Basalt Piece (Large)',
+    description: 'Large basalt fragment',
+    space: 0.4,
+    weight: 1.2,
+});
+basaltPieceLarge.ironYield = 1.0;
+
+const meteoriteFragment = new Item({
+    title: 'Meteorite Fragment',
+    description: 'The meteorite fragment is valuable and contains rare metals.',
+    space: 0.15,
+    weight: 0.7,
+});
+meteoriteFragment.ironYield = 6;
+meteoriteFragment.rare = true;
+
+const glassyShard = new Item({
+    title: 'Glassy Shard',
+    description: 'A glassy piece, sharp, of volcanic glass',
+    space: 0.05,
+    weight: 0.08,
+});
+glassyShard.ironYield = 0.1;
+
+const regolithDustSmall = new Item({
+    title: 'Regolith Dust (Small)',
+    description: 'A packet of Martian dust (regolith), fine material',
+    space: 0.02,
+    weight: 0.02,
+});
+regolithDustSmall.ironYield = 0.05;
+
+const regolithBag = new Item({
+    title: 'Regolith Bag (1kg)',
+    description: '1 kg bag of Martian sand/dust',
+    space: 0.12,
+    weight: 1.0,
+});
+regolithBag.ironYield = 0.3;
+
+const regolithSackLarge = new Item({
+    title: 'Regolith Sack (10kg)',
+    description: 'A large bag of Martian sand (~10 kg)',
+    space: 0.9,
+    weight: 10.0,
+});
+regolithSackLarge.ironYield = 3;
+
+const sandFine = new Item({
+    title: 'Martian Fine Sand',
+    description: 'Fine Martian sand, good for filtering',
+    space: 0.2,
+    weight: 1.5,
+});
+sandFine.ironYield = 0.6;
+
+const sandCoarse = new Item({
+    title: 'Martian Coarse Sand',
+    description: 'Coarse-grained Martian sand',
+    space: 0.25,
+    weight: 2.0,
+});
+sandCoarse.ironYield = 0.8;
+
+const rockBoulderSmall = new Item({
+    title: 'Rock Boulder (Small)',
+    description: 'A small boulder, heavy and bulky',
+    space: 1.6,
+    weight: 12.0,
+});
+rockBoulderSmall.ironYield = 20;
+
+const rockBoulderLarge = new Item({
+    title: 'Rock Boulder (Large)',
+    description: 'Large boulder, requires equipment to move',
+    space: 4.0,
+    weight: 40.0,
+});
+rockBoulderLarge.ironYield = 80;
+
