@@ -138,6 +138,20 @@ document.addEventListener("DOMContentLoaded", function () {
         }
 
         goalsPanel.innerHTML = "<h3>Задачі</h3>";
+
+        let main = document.createElement("p");
+        main.textContent =
+            mainGoal.text + (mainGoal.completed ? " Виконано" : " Не виконано");
+
+        goalsPanel.appendChild(main);
+        for (let i = 0; i < subGoals.length; i++) {
+            const g = subGoals[i];
+
+            let p = document.createElement("p");
+            p.textContent = g.text + (g.completed ? " Виконано" : " Не виконано");
+
+            goalsPanel.appendChild(p);
+        }
     }
 
     function calcOxygen() {
@@ -184,22 +198,26 @@ document.addEventListener("DOMContentLoaded", function () {
     invBtn.onclick = function () {
         if (dialogueActive) return;
 
-        const open = !invOpen;
-        closeAllPanels();
+        const isOpening = !invOpen;
 
-        invOpen = open;
+        invOpen = isOpening;
+        goalsOpen = false;
+
         invPanel.classList.toggle("hidden", !invOpen);
+        goalsPanel.classList.add("hidden");
     };
 
     goalsBtn.onclick = function () {
         if (dialogueActive) return;
 
-        const open = !goalsOpen;
-        closeAllPanels();
+        const isOpening = !goalsOpen;
 
-        goalsOpen = !goalsOpen;
+        goalsOpen = isOpening;
+        invOpen = false;
+
         goalsPanel.classList.toggle("hidden", !goalsOpen);
-    }
+        invPanel.classList.add("hidden");
+    };
 
     startDialogue(introDialogue);
 
