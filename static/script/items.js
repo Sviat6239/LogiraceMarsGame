@@ -32,3 +32,22 @@ class Canister extends Item {
         this.volume = volume;
     }
 }
+
+class Container extends Item {
+    constructor(title, description, space, weight, maxSpace, freeSpace, inventory) {
+        super(title, description, space, weight);
+        this.maxSpace = maxSpace;
+        this.freeSpace = freeSpace;
+        this.inventory = {};
+    }
+}
+
+class Battery extends Item {
+    constructor(title, description, space, weight, maxCurrent, maxVoltage, leftCurrent, leftVoltage) {
+        super(title, description, space, weight);
+        this.maxCurrent = maxCurrent;
+        this.maxVoltage = maxVoltage;
+        this.leftCurrent = leftCurrent;
+        this.leftVoltage = leftVoltage;
+    }
+}
