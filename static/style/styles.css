@@ -55,3 +55,31 @@ h2 {
 .hidden {
     display: none;
 }
+
+.mapPanel {
+    background-color: rgb(94, 3, 3);
+    border-color: rgb(255, 255, 255);
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 12px;
+    height: 220px;
+    width: 300px;
+    text-align: center;
+}
+
+.controlPanelRow {
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+}
+
+.tools {
+    background-color: rgb(94, 3, 3);
+    border-color: rgb(255, 255, 255);
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 12px;
+    height: 220px;
+    width: 300px;
+    text-align: center;
+}
