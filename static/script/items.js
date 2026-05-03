@@ -701,3 +701,163 @@ const emptyCanister2L = new Canister({
     volume: 2,
 });
 
+const palletSmall = new Container({
+    title: 'Pallet Small',
+    description: 'Wooden pallet small',
+    space: 1.0,
+    weight: 5.0,
+    maxSpace: 10,
+    freeSpace: 10,
+    inventory: {},
+});
+
+const palletLarge = new Container({
+    title: 'Pallet Large',
+    description: 'Large pallet',
+    space: 2.0,
+    weight: 10.0,
+    maxSpace: 25,
+    freeSpace: 25,
+    inventory: {},
+});
+
+const woodenCrateSmall = new Container({
+    title: 'Wooden Crate (Small)',
+    description: 'Small wooden box',
+    space: 0.8,
+    weight: 3.0,
+    maxSpace: 6,
+    freeSpace: 6,
+    inventory: {},
+});
+
+const woodenCrateLarge = new Container({
+    title: 'Wooden Crate (Large)',
+    description: 'Large wooden box',
+    space: 1.6,
+    weight: 6.0,
+    maxSpace: 14,
+    freeSpace: 14,
+    inventory: {},
+});
+
+const metalChest = new Container({
+    title: 'Metal Chest',
+    description: 'Hard metal chest',
+    space: 1.2,
+    weight: 12.0,
+    maxSpace: 12,
+    freeSpace: 12,
+    inventory: {},
+});
+
+const lockerSmall = new Container({
+    title: 'Locker Small',
+    description: 'A small locker with a door',
+    space: 0.9,
+    weight: 8.0,
+    maxSpace: 8,
+    freeSpace: 8,
+    inventory: {},
+});
+
+const lockerLarge = new Container({
+    title: 'Locker Large',
+    description: 'Tall locker cabinet',
+    space: 2.0,
+    weight: 18.0,
+    maxSpace: 22,
+    freeSpace: 22,
+    inventory: {},
+});
+
+const shelfSingle = new Container({
+    title: 'Shelf Single',
+    description: 'One metal shelf',
+    space: 0.6,
+    weight: 4.0,
+    maxSpace: 5,
+    freeSpace: 5,
+    inventory: {},
+});
+
+const shelfDouble = new Container({
+    title: 'Shelf Double',
+    description: 'Two shelves, medium size',
+    space: 1.0,
+    weight: 7.0,
+    maxSpace: 10,
+    freeSpace: 10,
+    inventory: {},
+});
+
+const shelfIndustrial = new Container({
+    title: 'Industrial Shelf',
+    description: 'Industrial shelving unit',
+    space: 3.0,
+    weight: 25.0,
+    maxSpace: 50,
+    freeSpace: 50,
+    inventory: {},
+});
+
+const boxSmall = new Container({
+    title: 'Box Small',
+    description: 'The cardboard box is small',
+    space: 0.2,
+    weight: 0.2,
+    maxSpace: 2,
+    freeSpace: 2,
+    inventory: {},
+});
+
+const boxMedium = new Container({
+    title: 'Box Medium',
+    description: 'Medium cardboard box',
+    space: 0.5,
+    weight: 0.6,
+    maxSpace: 5,
+    freeSpace: 5,
+    inventory: {},
+});
+
+const boxLarge = new Container({
+    title: 'Box Large',
+    description: 'Large cardboard box',
+    space: 1.0,
+    weight: 1.2,
+    maxSpace: 12,
+    freeSpace: 12,
+    inventory: {},
+});
+
+const storageRack = new Container({
+    title: 'Storage Rack',
+    description: 'Modular shelving with compartments',
+    space: 2.5,
+    weight: 20.0,
+    maxSpace: 40,
+    freeSpace: 40,
+    inventory: {},
+});
+
+const drawerUnit = new Container({
+    title: 'Drawer Unit',
+    description: 'Chest of drawers',
+    space: 1.4,
+    weight: 12.0,
+    maxSpace: 16,
+    freeSpace: 16,
+    inventory: {},
+});
+
+const cabinetLocker = new Container({
+    title: 'Cabinet Locker',
+    description: 'Closed cabinet with shelves',
+    space: 1.8,
+    weight: 15.0,
+    maxSpace: 20,
+    freeSpace: 20,
+    inventory: {},
+});
+
