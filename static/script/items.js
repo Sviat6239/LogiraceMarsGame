@@ -1012,3 +1012,211 @@ export const rockBoulderLarge = new Item({
 });
 rockBoulderLarge.ironYield = 80;
 
+export const batteryCR2032 = new Battery({
+    title: 'CR2032 (Coin)',
+    description: 'Small coin cell, low capacity',
+    space: 0.01,
+    weight: 0.005,
+    maxCurrent: 0.1,
+    maxVoltage: 3.0,
+    leftCurrent: 0.1,
+    leftVoltage: 3.0,
+});
+
+export const batteryAAA = new Battery({
+    title: 'AAA Battery',
+    description: 'Standard small cylindrical alkaline cell',
+    space: 0.02,
+    weight: 0.011,
+    maxCurrent: 0.5,
+    maxVoltage: 1.5,
+    leftCurrent: 0.5,
+    leftVoltage: 1.5,
+});
+
+export const batteryAA = new Battery({
+    title: 'AA Battery',
+    description: 'Common household cell, moderate capacity',
+    space: 0.03,
+    weight: 0.024,
+    maxCurrent: 1.0,
+    maxVoltage: 1.5,
+    leftCurrent: 1.0,
+    leftVoltage: 1.5,
+});
+
+export const batteryC = new Battery({
+    title: 'C Battery',
+    description: 'Larger alkaline cell for higher loads',
+    space: 0.08,
+    weight: 0.095,
+    maxCurrent: 2.5,
+    maxVoltage: 1.5,
+    leftCurrent: 2.5,
+    leftVoltage: 1.5,
+});
+
+export const batteryD = new Battery({
+    title: 'D Battery',
+    description: 'Large alkaline cell, high capacity',
+    space: 0.18,
+    weight: 0.26,
+    maxCurrent: 5.0,
+    maxVoltage: 1.5,
+    leftCurrent: 5.0,
+    leftVoltage: 1.5,
+});
+
+export const battery9V = new Battery({
+    title: '9V Battery',
+    description: 'Rectangular 9V battery, multiple cells inside',
+    space: 0.06,
+    weight: 0.045,
+    maxCurrent: 1.0,
+    maxVoltage: 9.0,
+    leftCurrent: 1.0,
+    leftVoltage: 9.0,
+});
+
+export const batteryCR123A = new Battery({
+    title: 'CR123A',
+    description: 'High-drain camera cell, compact',
+    space: 0.025,
+    weight: 0.017,
+    maxCurrent: 2.0,
+    maxVoltage: 3.0,
+    leftCurrent: 2.0,
+    leftVoltage: 3.0,
+});
+
+export const battery18650 = new Battery({
+    title: '18650 Li-ion Cell',
+    description: 'Common rechargeable cell, good capacity',
+    space: 0.04,
+    weight: 0.048,
+    maxCurrent: 5.0,
+    maxVoltage: 3.7,
+    leftCurrent: 5.0,
+    leftVoltage: 3.7,
+});
+
+export const battery21700 = new Battery({
+    title: '21700 Li-ion Cell',
+    description: 'Larger Li-ion cell with higher capacity',
+    space: 0.06,
+    weight: 0.065,
+    maxCurrent: 7.0,
+    maxVoltage: 3.7,
+    leftCurrent: 7.0,
+    leftVoltage: 3.7,
+});
+
+export const battery26650 = new Battery({
+    title: '26650 Li-ion Cell',
+    description: 'High-capacity cylindrical cell',
+    space: 0.09,
+    weight: 0.12,
+    maxCurrent: 10.0,
+    maxVoltage: 3.7,
+    leftCurrent: 10.0,
+    leftVoltage: 3.7,
+});
+
+export const batteryPowerBankSmall = new Battery({
+    title: 'Powerbank (5Wh)',
+    description: 'Small USB powerbank, for phones',
+    space: 0.2,
+    weight: 0.12,
+    maxCurrent: 2.0,
+    maxVoltage: 5.0,
+    leftCurrent: 2.0,
+    leftVoltage: 5.0,
+});
+
+export const batteryPowerBankMedium = new Battery({
+    title: 'Powerbank (20Wh)',
+    description: 'Medium powerbank, multi-charge capacity',
+    space: 0.4,
+    weight: 0.35,
+    maxCurrent: 3.0,
+    maxVoltage: 5.0,
+    leftCurrent: 3.0,
+    leftVoltage: 5.0,
+});
+
+export const batteryLaptopPack = new Battery({
+    title: 'Laptop Battery Pack',
+    description: 'Multi-cell laptop battery, high energy',
+    space: 0.8,
+    weight: 0.6,
+    maxCurrent: 20.0,
+    maxVoltage: 11.1,
+    leftCurrent: 20.0,
+    leftVoltage: 11.1,
+});
+
+export const batteryMotorcycle = new Battery({
+    title: 'Motorcycle Battery (12V)',
+    description: 'Lead-acid starter battery for motorcycles',
+    space: 1.2,
+    weight: 4.5,
+    maxCurrent: 120.0,
+    maxVoltage: 12.0,
+    leftCurrent: 120.0,
+    leftVoltage: 12.0,
+});
+
+export const batteryCar = new Battery({
+    title: 'Car Battery (12V)',
+    description: 'Standard car starter battery, heavy and powerful',
+    space: 2.5,
+    weight: 12.0,
+    maxCurrent: 600.0,
+    maxVoltage: 12.0,
+    leftCurrent: 600.0,
+    leftVoltage: 12.0,
+});
+
+export const batteryDeepCycle = new Battery({
+    title: 'Deep Cycle Battery',
+    description: 'Deep-cycle battery for long discharge, off-grid use',
+    space: 3.0,
+    weight: 18.0,
+    maxCurrent: 400.0,
+    maxVoltage: 12.0,
+    leftCurrent: 400.0,
+    leftVoltage: 12.0,
+});
+
+export const batteryMarine = new Battery({
+    title: 'Marine Battery',
+    description: 'Marine/dual-purpose battery for boats',
+    space: 3.5,
+    weight: 22.0,
+    maxCurrent: 500.0,
+    maxVoltage: 12.0,
+    leftCurrent: 500.0,
+    leftVoltage: 12.0,
+});
+
+export const batteryForklift = new Battery({
+    title: 'Forklift Battery (48V)',
+    description: 'Large industrial battery pack for heavy machinery',
+    space: 8.0,
+    weight: 500.0,
+    maxCurrent: 1000.0,
+    maxVoltage: 48.0,
+    leftCurrent: 1000.0,
+    leftVoltage: 48.0,
+});
+
+export const batteryIndustrial = new Battery({
+    title: 'Industrial Battery Rack',
+    description: 'Massive accumulator rack for base power/storage',
+    space: 12.0,
+    weight: 1200.0,
+    maxCurrent: 5000.0,
+    maxVoltage: 96.0,
+    leftCurrent: 5000.0,
+    leftVoltage: 96.0,
+});
