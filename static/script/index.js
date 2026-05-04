@@ -1,6 +1,6 @@
 import { mainState } from "./mainState.js";
 import { player } from "./player.js";
-import { introDialogue } from "./dialogue.js";
+import { introDialogue, inMainCorriodrDialogue } from "./dialogue.js";
 import { mainGoal, subGoals } from "./goals.js";
 
 document.addEventListener("DOMContentLoaded", function () {
@@ -86,6 +86,11 @@ document.addEventListener("DOMContentLoaded", function () {
             b.onclick = function () {
                 if (dialogueActive) return;
                 player.location = next;
+
+                if (player.location === mainState.modules[1]) {
+                    startDialogue(inMainCorriodrDialogue);
+                }
+
                 update();
             };
 
@@ -201,6 +206,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
             goalsPanel.appendChild(p);
         }
+
     }
 
     function calcOxygen() {
