@@ -1,6 +1,6 @@
 import { mainState } from "./mainState.js";
 import { player } from "./player.js";
-import { introDialogue, inMainCorriodrDialogue } from "./dialogue.js";
+import { introDialogue, inMainCorriodrDialogue, inCafeteriaModuleDialogue, inCafeteriaModuleDialogue2 } from "./dialogue.js";
 import { mainGoal, subGoals } from "./goals.js";
 
 document.addEventListener("DOMContentLoaded", function () {
@@ -27,13 +27,15 @@ document.addEventListener("DOMContentLoaded", function () {
     let dialogue = null;
     let dialogueStep = 0;
     let dialogueActive = false;
+    let dialogueCallback = null;
 
     player.location = mainState.modules[0];
 
-    function startDialogue(data) {
+    function startDialogue(data, callback) {
         dialogue = data;
         dialogueStep = 0;
         dialogueActive = true;
+        dialogueCallback = callback;
         renderDialogue();
     }
 
@@ -65,6 +67,12 @@ document.addEventListener("DOMContentLoaded", function () {
         dialogueActive = false;
         dialogueMessage.textContent = "";
         controlButtons.innerHTML = "";
+
+        if (dialogueCallback) {
+            const cb = dialogueCallback;
+            dialogueCallback = null;
+            cb();
+        }
     }
 
 
@@ -89,7 +97,14 @@ document.addEventListener("DOMContentLoaded", function () {
 
                 if (player.location === mainState.modules[1]) {
                     startDialogue(inMainCorriodrDialogue);
+                } else if (player.location === mainState.modules[2]) {
+                    startDialogue(inCafeteriaModuleDialogue, () => {
+                        setTimeout(() => {
+                            startDialogue(inCafeteriaModuleDialogue2);
+                        }, 3000);
+                    });
                 }
+
 
                 update();
             };
