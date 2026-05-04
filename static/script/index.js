@@ -1,7 +1,8 @@
 import { mainState } from "./mainState.js";
 import { player } from "./player.js";
-import { introDialogue, inMainCorriodrDialogue, inCafeteriaModuleDialogue, inCafeteriaModuleDialogue2 } from "./dialogue.js";
+import { introDialogue, inMainCorriodrDialogue, inCafeteriaModuleDialogue, inCafeteriaModuleDialogue2, inCafeteriaModuleDialogue3, inLivingCorridorDialogue } from "./dialogue.js";
 import { mainGoal, subGoals } from "./goals.js";
+import { CafeteriaModule, GreenHouseModule, LivingModule, ReactorModule } from "./stateModules.js";
 
 document.addEventListener("DOMContentLoaded", function () {
 
@@ -28,6 +29,23 @@ document.addEventListener("DOMContentLoaded", function () {
     let dialogueStep = 0;
     let dialogueActive = false;
     let dialogueCallback = null;
+
+    const dialoguePlayedFlag = {
+        mainModule: false,
+        mainCorridor: false,
+        cafeteriaModule: false,
+        livingCorridor: false,
+        livingModuleA: false,
+        livingModuleB: false,
+        livingModuleC: false,
+        greenCorridor: false,
+        greenHouseModuleA: false,
+        greenHouseModuleB: false,
+        reactorModule: false,
+        technicalCorridor: false,
+        storageModuleA: false,
+        storageModuleB: false
+    }
 
     player.location = mainState.modules[0];
 
@@ -95,15 +113,30 @@ document.addEventListener("DOMContentLoaded", function () {
                 if (dialogueActive) return;
                 player.location = next;
 
-                if (player.location === mainState.modules[1]) {
+                if (player.location === mainState.modules[1] && !dialoguePlayedFlag.mainCorridor) {
+                    dialoguePlayedFlag.mainCorridor = true;
                     startDialogue(inMainCorriodrDialogue);
-                } else if (player.location === mainState.modules[2]) {
+                }
+
+                else if (player.location === mainState.modules[2] && !dialoguePlayedFlag.cafeteriaModule) {
+                    dialoguePlayedFlag.cafeteriaModule = true;
+
                     startDialogue(inCafeteriaModuleDialogue, () => {
+
                         setTimeout(() => {
-                            startDialogue(inCafeteriaModuleDialogue2);
+                            startDialogue(inCafeteriaModuleDialogue2, () => {
+
+                                setTimeout(() => {
+                                    startDialogue(inCafeteriaModuleDialogue3);
+                                }, 3000);
+
+                            });
                         }, 3000);
+
                     });
                 }
+
+
 
 
                 update();
