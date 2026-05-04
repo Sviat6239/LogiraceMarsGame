@@ -96,56 +96,91 @@ document.addEventListener("DOMContentLoaded", function () {
         locInvDiv.innerHTML = "<h3>Локація</h3>";
 
         let items = player.location.inventory || {};
-        let keys = Object.keys(items);
+        let locKeys = Object.keys(items);
 
-        if (keys.length === 0) {
+        if (locKeys.length === 0) {
             locInvDiv.innerHTML += "<p>Нічого немає</p>";
         } else {
-
-            for (let i = 0; i < keys.length; i++) {
-
-                let id = keys[i];
+            for (let i = 0; i < locKeys.length; i++) {
+                let id = locKeys[i];
                 let count = items[id];
 
                 let p = document.createElement("p");
                 p.textContent = `${id} x${count}`;
 
-                let pickBtn = document.createElement("button");
-                pickBtn.textContent = "Взяти";
+                let pickOneBtn = document.createElement("button");
+                pickOneBtn.textContent = "+1";
 
-                pickBtn.onclick = function () {
+                pickOneBtn.onclick = function () {
                     if (dialogueActive) return;
 
                     player.pickUp(
                         { id, title: id, space: 1, weight: 1 },
                         player.location,
-                        count
+                        1
                     );
 
                     update();
                 };
 
-                p.appendChild(pickBtn);
+                let pickAllBtn = document.createElement("button");
+                pickAllBtn.textContent = "Все";
+
+                pickAllBtn.onclick = function () {
+                    if (dialogueActive) return;
+
+                    player.pickUp(
+                        { id, title: id, space: 1, weight: 1 },
+                        player.location,
+                        "all"
+                    );
+
+                    update();
+                };
+
+                p.appendChild(pickOneBtn);
+                p.appendChild(pickAllBtn);
                 locInvDiv.appendChild(p);
             }
         }
 
         playerInvDiv.innerHTML = "<h3>Інвентарь</h3>";
 
-        let inv = player.inventory || {};
-        let keys = Object.keys(inv);
+        let invArr = player.inventory || [];
 
-        if (keys.length === 0) {
+        if (invArr.length === 0) {
             playerInvDiv.innerHTML += "<p>Пусто</p>";
         } else {
-
-            for (let i = 0; i < keys.length; i++) {
-
-                let id = keys[i];
-                let count = inv[id];
+            for (let i = 0; i < invArr.length; i++) {
+                const entry = invArr[i];
+                const title = entry.item && (entry.item.title || entry.item.id) ? (entry.item.title || entry.item.id) : String(i);
+                const count = entry.count;
 
                 let p = document.createElement("p");
-                p.textContent = `${id} x${count}`;
+                p.textContent = `${title} x${count}`;
+
+                let dropOneBtn = document.createElement("button");
+                dropOneBtn.textContent = "-1";
+
+                dropOneBtn.onclick = function () {
+                    if (dialogueActive) return;
+
+                    player.drop(entry.item, player.location, 1);
+                    update();
+                };
+
+                let dropAllBtn = document.createElement("button");
+                dropAllBtn.textContent = "Все";
+
+                dropAllBtn.onclick = function () {
+                    if (dialogueActive) return;
+
+                    player.drop(entry.item, player.location, "all");
+                    update();
+                };
+
+                p.appendChild(dropOneBtn);
+                p.appendChild(dropAllBtn);
 
                 playerInvDiv.appendChild(p);
             }
