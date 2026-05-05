@@ -50,3 +50,9 @@ export class CorridorModule extends StateModule {
         super(title, description, damage, maxSpace, freeSpace, oxygen, maxOxygen, temperature, airPollution, moinsture, energyConsumption, nextLocation, inventory);
     }
 }
+
+export class CommunicationCenter extends StateModule {
+    constructor(title, description, damage, maxSpace, freeSpace, oxygen, maxOxygen, temperature, airPollution, moinsture, energyConsumption, nextLocation, inventory) {
+        super(title, description, damage, maxSpace, freeSpace, oxygen, maxOxygen, temperature, airPollution, moinsture, energyConsumption, nextLocation, inventory);
+    }
+}
