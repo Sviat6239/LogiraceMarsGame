@@ -19,7 +19,18 @@ const mainModule = new MainModule({
 	nextLocation: [1],
 	inventory: {
 		cannedTuna: 7,
-	},
+		bottle1L: 3,
+		galetaClassic: 10,
+		batteryAA: 4,
+		batteryAAA: 6,
+		multitool: 1,
+		screwdriverPhillips: 1,
+		screwdriverFlat: 1,
+		pliers: 1,
+		emptyBottle1L: 2,
+		scrapMetalSmall: 1
+	}
+
 });
 
 const cafeteriaModule = new CafeteriaModule({
@@ -35,7 +46,17 @@ const cafeteriaModule = new CafeteriaModule({
 	moinsture: 23,
 	nextLocation: [1, 7, 3, 11],
 	inventory: {
-		cannedTuna: 7,
+		cannedBeans: 5,
+		cannedCorn: 4,
+		cannedChicken: 3,
+		cannedBeefStewSmall: 2,
+		fruitCocktail: 2,
+		emptyCanSmall: 6,
+		emptyCanLarge: 3,
+		plasticBag: 4,
+		brokenGlass: 2,
+		tinFragments: 3,
+		canLidPile: 2
 	},
 })
 
@@ -51,7 +72,11 @@ const mainCorridor = new CorridorModule({
 	moinsture: 18,
 	energyConsumption: 400,
 	nextLocation: [0, 2],
-	inventory: {},
+	inventory: {
+		crushedPlasticBottle: 2,
+		cardboardBox: 1,
+		brokenGlass: 1
+	},
 })
 
 const technicalCorridor = new CorridorModule({
@@ -66,7 +91,12 @@ const technicalCorridor = new CorridorModule({
 	moinsture: 22,
 	energyConsumption: 370,
 	nextLocation: [2, 12, 13, 10],
-	inventory: {},
+	inventory: {
+		screwdriverFlat: 1,
+		screwdriverPhillips: 1,
+		emptyBottleCrushed: 2,
+		scrapMetalSmall: 1
+	},
 })
 
 const greenCorridor = new CorridorModule({
@@ -81,7 +111,10 @@ const greenCorridor = new CorridorModule({
 	moinsture: 30,
 	energyConsumption: 370,
 	nextLocation: [2, 8, 9],
-	inventory: {},
+	inventory: {
+		plasticScrapLarge: 1,
+		emptyBottleLarge: 1
+	},
 })
 
 const livingCorridor = new CorridorModule({
@@ -96,7 +129,11 @@ const livingCorridor = new CorridorModule({
 	moinsture: 18,
 	energyConsumption: 390,
 	nextLocation: [2, 4, 5, 6],
-	inventory: {},
+	inventory: {
+		crushedPlasticBottle: 1,
+		plasticBag: 2,
+		emptyBottle0_5L: 1
+	},
 })
 
 const storageModuleA = new StorageModule({
@@ -115,7 +152,19 @@ const storageModuleA = new StorageModule({
 	energyConsumption: 4000,
 	moinsture: 20,
 	nextLocation: [11],
-	inventory: {},
+	inventory: {
+		canister35L: 2,
+		barrel50L: 1,
+		barrel100L: 1,
+		boxLarge: 3,
+		boxMedium: 4,
+		palletLarge: 1,
+		palletSmall: 2,
+		scrapMetalLarge: 2,
+		metalBoltPile: 3,
+		emptyCanisterSmall: 3,
+		emptyCanisterLarge: 2
+	},
 });
 
 const storageModuleB = new StorageModule({
@@ -134,7 +183,18 @@ const storageModuleB = new StorageModule({
 	energyConsumption: 3500,
 	moinsture: 21,
 	nextLocation: [11],
-	inventory: {},
+	inventory: {
+		canister20L: 2,
+		canister25L: 2,
+		canister35L: 1,
+		palletSmall: 1,
+		woodenCrateLarge: 2,
+		woodenCrateSmall: 3,
+		scrapMetal: 3,
+		scrapMetalSmall: 2,
+		cardboardBundle: 2,
+		plasticScrapLarge: 2
+	},
 });
 
 const livingModuleA = new LivingModule({
@@ -150,7 +210,14 @@ const livingModuleA = new LivingModule({
 	energyConsumption: 1000,
 	moinsture: 20,
 	nextLocation: [3],
-	inventory: {},
+	inventory: {
+		bottle0_5L: 2,
+		galetaCompact: 4,
+		foldingKnife: 1,
+		batteryAAA: 2,
+		emptyBottle0_5L: 1,
+		cardboardBox: 1
+	},
 });
 
 const livingModuleB = new LivingModule({
@@ -166,7 +233,14 @@ const livingModuleB = new LivingModule({
 	energyConsumption: 1000,
 	moinsture: 22,
 	nextLocation: [3],
-	inventory: {},
+	inventory: {
+		bottle1L: 1,
+		galetaHoney: 3,
+		swissKnife: 1,
+		batteryAA: 3,
+		plasticBagPile: 1,
+		emptyCanTiny: 2
+	},
 });
 
 const livingModuleC = new LivingModule({
@@ -182,7 +256,13 @@ const livingModuleC = new LivingModule({
 	energyConsumption: 1000,
 	moinsture: 21,
 	nextLocation: [3],
-	inventory: {},
+	inventory: {
+		galetaClassic: 5,
+		bottle0_5L: 1,
+		batteryCR2032: 2,
+		emptyBottle0_5L: 1,
+		cardboardBundle: 1
+	},
 });
 
 const greenHouseModuleA = new GreenHouseModule({
@@ -199,7 +279,16 @@ const greenHouseModuleA = new GreenHouseModule({
 	energyConsumption: 5000,
 	moinsture: 58,
 	nextLocation: [7],
-	inventory: {},
+	inventory: {
+		bottle3L: 2,
+		bottle5L: 1,
+		canister15L: 1,
+		shovel: 1,
+		hatchet: 1,
+		emptyCanister2L: 2,
+		sandFine: 1,
+		regolithBag: 1
+	},
 })
 
 const greenHouseModuleB = new GreenHouseModule({
@@ -216,7 +305,16 @@ const greenHouseModuleB = new GreenHouseModule({
 	energyConsumption: 5000,
 	moinsture: 60,
 	nextLocation: [7],
-	inventory: {},
+	inventory: {
+		bottle4L: 1,
+		bottle5L: 2,
+		canister20L: 1,
+		canister25L: 1,
+		pliers: 1,
+		emptyBottle1L: 2,
+		sandCoarse: 1,
+		regolithDustSmall: 2
+	},
 })
 
 const reactorModule = new ReactorModule({
@@ -235,7 +333,16 @@ const reactorModule = new ReactorModule({
 	energyConsumption: 2000,
 	moinsture: 25,
 	nextLocation: [11],
-	inventory: {},
+	inventory: {
+		wrench: 1,
+		adjustableWrench: 1,
+		crowbar: 1,
+		batteryCR123A: 2,
+		battery18650: 3,
+		scrapMetal: 2,
+		metalPipe: 1,
+		tinFragments: 2
+	},
 })
 
 mainState.title = 'Main state';
