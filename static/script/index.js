@@ -1,6 +1,6 @@
 import { mainState } from "./mainState.js";
 import { player } from "./player.js";
-import { introDialogue, inMainCorriodrDialogue, inCafeteriaModuleDialogue, inCafeteriaModuleDialogue2, inCafeteriaModuleDialogue3, inLivingCorridorDialogue } from "./dialogue.js";
+import { introDialogue, inMainCorriodrDialogue, inCafeteriaModuleDialogue, inCafeteriaModuleDialogue2, inCafeteriaModuleDialogue3, inLivingCorridorDialogue, inLivingModuleADialogue, inLivingModuleBDialogue, inLivingModuleCDialogue, greenCorridorDialogue, greenHouseModuleADialogue, greenHouseModuleBDialogue, technicalCorridorDialogue, reactorModuleDialogue, storageModuleADialogue, storageModuleBDialogue } from "./dialogue.js";
 import { mainGoal, subGoals } from "./goals.js";
 import { CafeteriaModule, GreenHouseModule, LivingModule, ReactorModule } from "./stateModules.js";
 
@@ -134,10 +134,41 @@ document.addEventListener("DOMContentLoaded", function () {
                         }, 3000);
 
                     });
+                } else if (player.location === mainState.modules[3] && !dialoguePlayedFlag.livingCorridor) {
+                    dialoguePlayedFlag.livingCorridor = true;
+
+                    startDialogue(inLivingCorridorDialogue);
+                } else if (player.location === mainState.modules[4] && !dialoguePlayedFlag.livingModuleA) {
+                    dialoguePlayedFlag.livingModuleA = true;
+                    startDialogue(inLivingModuleADialogue);
+                } else if (player.location === mainState.modules[5] && !dialoguePlayedFlag.livingModuleB) {
+                    dialoguePlayedFlag.livingModuleB = true;
+                    startDialogue(inLivingModuleBDialogue);
+                } else if (player.location === mainState.modules[6] && !dialoguePlayedFlag.livingModuleC) {
+                    dialoguePlayedFlag.livingModuleC = true;
+                    startDialogue(inLivingModuleCDialogue);
+                } else if (player.location === mainState.modules[7] && !dialoguePlayedFlag.greenCorridor) {
+                    dialoguePlayedFlag.greenCorridor = true;
+                    startDialogue(greenCorridorDialogue);
+                } else if (player.location === mainState.modules[8] && !dialoguePlayedFlag.greenHouseModuleA) {
+                    dialoguePlayedFlag.greenHouseModuleA = true;
+                    startDialogue(greenHouseModuleADialogue);
+                } else if (player.location === mainState.modules[9] && !dialoguePlayedFlag.greenHouseModuleB) {
+                    dialoguePlayedFlag.greenHouseModuleB = true;
+                    startDialogue(greenHouseModuleBDialogue);
+                } else if (player.location === mainState.modules[10] && !dialoguePlayedFlag.reactorModule) {
+                    dialoguePlayedFlag.reactorModule = true;
+                    startDialogue(reactorModuleDialogue);
+                } else if (player.location === mainState.modules[11] && !dialoguePlayedFlag.technicalCorridor) {
+                    dialoguePlayedFlag.technicalCorridor = true;
+                    startDialogue(technicalCorridorDialogue);
+                } else if (player.location === mainState.modules[12] && !dialoguePlayedFlag.storageModuleA) {
+                    dialoguePlayedFlag.storageModuleA = true;
+                    startDialogue(storageModuleADialogue);
+                } else if (player.location === mainState.modules[13] && !dialoguePlayedFlag.storageModuleB) {
+                    dialoguePlayedFlag.storageModuleB = true;
+                    startDialogue(storageModuleBDialogue);
                 }
-
-
-
 
                 update();
             };
