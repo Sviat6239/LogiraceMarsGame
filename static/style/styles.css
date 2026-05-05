@@ -4,6 +4,7 @@ body {
     display: flex;
     align-items: center;
     background-color: black;
+    font-family: monospace;
 }
 
 .controlPanel {
@@ -51,6 +52,9 @@ h2 {
     height: 350px;
     width: 750px;
     text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    color: azure;
 }
 
 .goalPanel {
@@ -62,6 +66,9 @@ h2 {
     height: 350px;
     width: 750px;
     text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    color: azure;
 }
 
 .hidden {
@@ -100,4 +107,5 @@ h2 {
 .dialogueMessage {
     font-size: 24px;
     font-weight: bold;
+    color: azure;
 }
