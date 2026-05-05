@@ -45,9 +45,7 @@ h2 {
 
 .inventoryPanel {
     background-color: rgb(94, 3, 3);
-    border-color: rgb(255, 255, 255);
-    border-style: solid;
-    border-width: 1px;
+    border: 1px solid white;
     border-radius: 12px;
     height: 350px;
     width: 750px;
@@ -55,6 +53,12 @@ h2 {
     font-size: 18px;
     font-weight: bold;
     color: azure;
+    display: flex;
+    flex-wrap: wrap;
+    overflow-y: auto;
+    overflow-x: hidden;
+    padding: 10px;
+    box-sizing: border-box;
 }
 
 .goalPanel {
@@ -69,6 +73,11 @@ h2 {
     font-size: 18px;
     font-weight: bold;
     color: azure;
+    flex-wrap: wrap;
+    overflow-y: auto;
+    overflow-x: hidden;
+    padding: 10px;
+    box-sizing: border-box;
 }
 
 .hidden {

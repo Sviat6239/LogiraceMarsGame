@@ -1015,7 +1015,7 @@ rockBoulderLarge.ironYield = 80;
 export const batteryCR2032 = new Battery({
     title: 'CR2032 (Coin)',
     description: 'Small coin cell, low capacity',
-    space: 0.01,
+    space: 0.005,
     weight: 0.005,
     maxCurrent: 0.1,
     maxVoltage: 3.0,
@@ -1026,7 +1026,7 @@ export const batteryCR2032 = new Battery({
 export const batteryAAA = new Battery({
     title: 'AAA Battery',
     description: 'Standard small cylindrical alkaline cell',
-    space: 0.02,
+    space: 0.01,
     weight: 0.011,
     maxCurrent: 0.5,
     maxVoltage: 1.5,
@@ -1037,7 +1037,7 @@ export const batteryAAA = new Battery({
 export const batteryAA = new Battery({
     title: 'AA Battery',
     description: 'Common household cell, moderate capacity',
-    space: 0.03,
+    space: 0.02,
     weight: 0.024,
     maxCurrent: 1.0,
     maxVoltage: 1.5,
@@ -1048,7 +1048,7 @@ export const batteryAA = new Battery({
 export const batteryC = new Battery({
     title: 'C Battery',
     description: 'Larger alkaline cell for higher loads',
-    space: 0.08,
+    space: 0.06,
     weight: 0.095,
     maxCurrent: 2.5,
     maxVoltage: 1.5,
@@ -1059,7 +1059,7 @@ export const batteryC = new Battery({
 export const batteryD = new Battery({
     title: 'D Battery',
     description: 'Large alkaline cell, high capacity',
-    space: 0.18,
+    space: 0.13,
     weight: 0.26,
     maxCurrent: 5.0,
     maxVoltage: 1.5,
@@ -1070,7 +1070,7 @@ export const batteryD = new Battery({
 export const battery9V = new Battery({
     title: '9V Battery',
     description: 'Rectangular 9V battery, multiple cells inside',
-    space: 0.06,
+    space: 0.02,
     weight: 0.045,
     maxCurrent: 1.0,
     maxVoltage: 9.0,
@@ -1081,7 +1081,7 @@ export const battery9V = new Battery({
 export const batteryCR123A = new Battery({
     title: 'CR123A',
     description: 'High-drain camera cell, compact',
-    space: 0.025,
+    space: 0.02,
     weight: 0.017,
     maxCurrent: 2.0,
     maxVoltage: 3.0,
@@ -1092,7 +1092,7 @@ export const batteryCR123A = new Battery({
 export const battery18650 = new Battery({
     title: '18650 Li-ion Cell',
     description: 'Common rechargeable cell, good capacity',
-    space: 0.04,
+    space: 0.03,
     weight: 0.048,
     maxCurrent: 5.0,
     maxVoltage: 3.7,
@@ -1103,7 +1103,7 @@ export const battery18650 = new Battery({
 export const battery21700 = new Battery({
     title: '21700 Li-ion Cell',
     description: 'Larger Li-ion cell with higher capacity',
-    space: 0.06,
+    space: 0.04,
     weight: 0.065,
     maxCurrent: 7.0,
     maxVoltage: 3.7,
@@ -1114,7 +1114,7 @@ export const battery21700 = new Battery({
 export const battery26650 = new Battery({
     title: '26650 Li-ion Cell',
     description: 'High-capacity cylindrical cell',
-    space: 0.09,
+    space: 0.05,
     weight: 0.12,
     maxCurrent: 10.0,
     maxVoltage: 3.7,
@@ -1125,7 +1125,7 @@ export const battery26650 = new Battery({
 export const batteryPowerBankSmall = new Battery({
     title: 'Powerbank (5Wh)',
     description: 'Small USB powerbank, for phones',
-    space: 0.2,
+    space: 0.1,
     weight: 0.12,
     maxCurrent: 2.0,
     maxVoltage: 5.0,
@@ -1136,7 +1136,7 @@ export const batteryPowerBankSmall = new Battery({
 export const batteryPowerBankMedium = new Battery({
     title: 'Powerbank (20Wh)',
     description: 'Medium powerbank, multi-charge capacity',
-    space: 0.4,
+    space: 0.2,
     weight: 0.35,
     maxCurrent: 3.0,
     maxVoltage: 5.0,
@@ -1147,7 +1147,7 @@ export const batteryPowerBankMedium = new Battery({
 export const batteryLaptopPack = new Battery({
     title: 'Laptop Battery Pack',
     description: 'Multi-cell laptop battery, high energy',
-    space: 0.8,
+    space: 0.6,
     weight: 0.6,
     maxCurrent: 20.0,
     maxVoltage: 11.1,
