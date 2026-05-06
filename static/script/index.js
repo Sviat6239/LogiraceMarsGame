@@ -1,6 +1,6 @@
 import { mainState } from "./mainState.js";
 import { player } from "./player.js";
-import { introDialogue, inMainCorriodrDialogue, inCafeteriaModuleDialogue, inCafeteriaModuleDialogue2, inCafeteriaModuleDialogue3, inLivingCorridorDialogue, inLivingModuleADialogue, inLivingModuleBDialogue, inLivingModuleCDialogue, greenCorridorDialogue, greenHouseModuleADialogue, greenHouseModuleBDialogue, technicalCorridorDialogue, reactorModuleDialogue, storageModuleADialogue, storageModuleBDialogue } from "./dialogue.js";
+import { introDialogue, inMainCorriodrDialogue, inCafeteriaModuleDialogue, inCafeteriaModuleDialogue2, inCafeteriaModuleDialogue3, inLivingCorridorDialogue, inLivingModuleADialogue, inLivingModuleBDialogue, inLivingModuleCDialogue, greenCorridorDialogue, greenHouseModuleADialogue, greenHouseModuleBDialogue, technicalCorridorDialogue, reactorModuleDialogue, storageModuleADialogue, storageModuleBDialogue, communicationCenterDialogue, mediacalUnitDialogue } from "./dialogue.js";
 import { mainGoal, subGoals } from "./goals.js";
 import { CafeteriaModule, CommunicationCenter, GreenHouseModule, LivingModule, MediacalUnit, ReactorModule } from "./stateModules.js";
 
@@ -130,10 +130,10 @@ document.addEventListener("DOMContentLoaded", function () {
 
                                 setTimeout(() => {
                                     startDialogue(inCafeteriaModuleDialogue3);
-                                }, 3000);
+                                }, 1000);
 
                             });
-                        }, 3000);
+                        }, 1000);
 
                     });
                 } else if (player.location === mainState.modules[3] && !dialoguePlayedFlag.livingCorridor) {
@@ -170,6 +170,12 @@ document.addEventListener("DOMContentLoaded", function () {
                 } else if (player.location === mainState.modules[13] && !dialoguePlayedFlag.storageModuleB) {
                     dialoguePlayedFlag.storageModuleB = true;
                     startDialogue(storageModuleBDialogue);
+                } else if (player.location === mainState.modules[14] && !dialoguePlayedFlag.communicationCenter) {
+                    dialoguePlayedFlag.communicationCenter = true;
+                    startDialogue(communicationCenterDialogue);
+                } else if (player.location === mainState.modules[15] && !dialoguePlayedFlag.mediacalUnit) {
+                    dialoguePlayedFlag.mediacalUnit = true;
+                    startDialogue(mediacalUnitDialogue);
                 }
 
                 update();

@@ -126,3 +126,14 @@ export const storageModuleBDialogue = [
     { text: "Треба швидше знайти хоч когось. Або хоч щось." }
 ];
 
+export const mediacalUnitDialogue = [
+    { text: "Ух... запашок як в больниці." },
+    { text: "Може щось навіть цікавеньке знайду." },
+    { text: "Або навіть скелета Петровича як у нас було..." },
+];
+
+export const communicationCenterDialogue = [
+    { text: "Опа, вузол зв'язку..." },
+    { text: "Те що треба нам..." },
+    { text: "Треба буде полагодити це все." },
+];
