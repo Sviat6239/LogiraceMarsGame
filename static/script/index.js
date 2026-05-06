@@ -130,15 +130,16 @@ document.addEventListener("DOMContentLoaded", function () {
                 if (dialogueActive) return;
                 player.location = next;
 
+                const currentIdx = mainState.modules.indexOf(player.location);
+                locationVisits[currentIdx] = (locationVisits[currentIdx] || 0) + 1;
+
                 if (player.location === mainState.modules[1] && !dialoguePlayedFlag.mainCorridor) {
                     dialoguePlayedFlag.mainCorridor = true;
                     startDialogue(inMainCorriodrDialogue);
-                    locationVisits.mainCorridor += 1;
                 }
 
                 else if (player.location === mainState.modules[2] && !dialoguePlayedFlag.cafeteriaModule) {
                     dialoguePlayedFlag.cafeteriaModule = true;
-                    locationVisits.cafeteriaModule += 1;
 
                     startDialogue(inCafeteriaModuleDialogue, () => {
 
@@ -207,15 +208,27 @@ document.addEventListener("DOMContentLoaded", function () {
                     startDialogue(mediacalUnitDialogue);
                 }
 
-                if (player.location === mainState.modules[8]) {
-                    locationVisits.greenHouseModuleA += 1;
+                if (currentIdx === 10 && locationVisits[currentIdx] === 2) {
+                    subGoals[0].completed = true;
+                    alert('Живлення відновлене.');
                 }
-                if (player.location === mainState.modules[9]) {
-                    locationVisits.greenHouseModuleB += 1;
+                if (currentIdx === 8 && locationVisits[currentIdx] === 2 && subGoals[0].completed === true) {
+                    subGoals[1].completed = true;
+                    alert('Система фільтрації повітря налагоджено.');
                 }
-                if (player.location === mainState.modules[14]) {
-                    locationVisits.communicationCenter += 1;
+                if (currentIdx === 14 && locationVisits[currentIdx] === 2 && subGoals[0].completed === true) {
+                    subGoals[2].completed = true;
+                    alert('Вузол зв"язку відновлено.');
                 }
+                if (currentIdx === 14 && locationVisits[currentIdx] === 3 && subGoals[0].completed === true && subGoals[2].completed === true) {
+                    subGoals[3].completed = true;
+                    alert('Живлення на передавач подане.');
+                }
+                if (currentIdx === 0 && locationVisits[currentIdx] === 2 && subGoals[0].completed === true && subGoals[2].completed === true && subGoals[3].completed === true) {
+                    subGoals[4].completed = true;
+                    alert('Аварійний сигнал був відправленний на орбітальну станцію.');
+                }
+
 
                 update();
             };
