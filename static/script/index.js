@@ -1,6 +1,6 @@
 import { mainState } from "./mainState.js";
 import { player } from "./player.js";
-import { introDialogue, inMainCorriodrDialogue, inCafeteriaModuleDialogue, inCafeteriaModuleDialogue2, inCafeteriaModuleDialogue3, inLivingCorridorDialogue, inLivingModuleADialogue, inLivingModuleBDialogue, inLivingModuleCDialogue, greenCorridorDialogue, greenHouseModuleADialogue, greenHouseModuleBDialogue, technicalCorridorDialogue, reactorModuleDialogue, storageModuleADialogue, storageModuleBDialogue, communicationCenterDialogue, mediacalUnitDialogue } from "./dialogue.js";
+import { introDialogue, inMainCorriodrDialogue, inCafeteriaModuleDialogue, inCafeteriaModuleDialogue2, inCafeteriaModuleDialogue3, inLivingCorridorDialogue, inLivingModuleADialogue, inLivingModuleBDialogue, inLivingModuleCDialogue, greenCorridorDialogue, greenHouseModuleADialogue, greenHouseModuleBDialogue, technicalCorridorDialogue, reactorModuleDialogue, storageModuleADialogue, storageModuleBDialogue, communicationCenterDialogue, mediacalUnitDialogue, reactorModuleGoalDialogue } from "./dialogue.js";
 import { mainGoal, subGoals } from "./goals.js";
 import { CafeteriaModule, CommunicationCenter, GreenHouseModule, LivingModule, MediacalUnit, ReactorModule } from "./stateModules.js";
 
@@ -210,6 +210,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
                 if (currentIdx === 10 && locationVisits[currentIdx] === 2) {
                     subGoals[0].completed = true;
+                    startDialogue(reactorModuleGoalDialogue);
                     alert('Живлення відновлене.');
                 }
                 if (currentIdx === 8 && locationVisits[currentIdx] === 2 && subGoals[0].completed === true) {
@@ -227,6 +228,10 @@ document.addEventListener("DOMContentLoaded", function () {
                 if (currentIdx === 0 && locationVisits[currentIdx] === 2 && subGoals[0].completed === true && subGoals[2].completed === true && subGoals[3].completed === true) {
                     subGoals[4].completed = true;
                     alert('Аварійний сигнал був відправленний на орбітальну станцію.');
+                }
+                if (currentIdx === 15 && locationVisits[currentIdx] === 2 && subGoals[0].completed === true) {
+                    subGoals[5].completed = true;
+                    alert('З"ясована причина гибелі колоністів.');
                 }
 
 
