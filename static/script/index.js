@@ -2,7 +2,7 @@ import { mainState } from "./mainState.js";
 import { player } from "./player.js";
 import { introDialogue, inMainCorriodrDialogue, inCafeteriaModuleDialogue, inCafeteriaModuleDialogue2, inCafeteriaModuleDialogue3, inLivingCorridorDialogue, inLivingModuleADialogue, inLivingModuleBDialogue, inLivingModuleCDialogue, greenCorridorDialogue, greenHouseModuleADialogue, greenHouseModuleBDialogue, technicalCorridorDialogue, reactorModuleDialogue, storageModuleADialogue, storageModuleBDialogue } from "./dialogue.js";
 import { mainGoal, subGoals } from "./goals.js";
-import { CafeteriaModule, GreenHouseModule, LivingModule, ReactorModule } from "./stateModules.js";
+import { CafeteriaModule, CommunicationCenter, GreenHouseModule, LivingModule, MediacalUnit, ReactorModule } from "./stateModules.js";
 
 document.addEventListener("DOMContentLoaded", function () {
 
@@ -44,7 +44,9 @@ document.addEventListener("DOMContentLoaded", function () {
         reactorModule: false,
         technicalCorridor: false,
         storageModuleA: false,
-        storageModuleB: false
+        storageModuleB: false,
+        communicationCenter: false,
+        mediacalUnit: false
     }
 
     player.location = mainState.modules[0];

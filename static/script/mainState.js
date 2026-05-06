@@ -1,5 +1,5 @@
 import { State } from "./gameStats.js";
-import { MainModule, StorageModule, GreenHouseModule, LivingModule, ReactorModule, CorridorModule, CafeteriaModule, communicationCenter, CommunicationCenter } from "./stateModules.js";
+import { MainModule, StorageModule, GreenHouseModule, LivingModule, ReactorModule, CorridorModule, CafeteriaModule, CommunicationCenter, MediacalUnit } from "./stateModules.js";
 import { cannedTuna, botleOfWater, cannedBeans, cannedBeefStew, cannedChicken, cannedCorn, bottle0_5L, bottle1L, barrel100L, battery18650, battery21700, battery26650, batteryAAA, batteryCR2032, batteryAA, batteryCR123A, } from "./items.js";
 
 export let mainState = new State();
@@ -71,7 +71,7 @@ const mainCorridor = new CorridorModule({
 	airPollution: 2,
 	moinsture: 18,
 	energyConsumption: 400,
-	nextLocation: [0, 2],
+	nextLocation: [0, 2, 14, 15],
 	inventory: {
 		crushedPlasticBottle: 2,
 		cardboardBox: 1,
@@ -97,6 +97,23 @@ const communicationCenter = new CommunicationCenter({
 		batteryAA: 11,
 		batteryCR123A: 23,
 	},
+})
+
+const mediacalUnit = new MediacalUnit({
+	title: 'Mediacal Unit',
+	description: 'Simple medical unit, with hospital smell',
+	maxSpace: 200,
+	freeSpace: 200,
+	oxygen: 5000,
+	maxOxygen: 5000,
+	temperature: 19,
+	airPollution: 0,
+	moinsture: 20,
+	energyConsumption: 730,
+	nextLocation: [1],
+	inventory: {
+
+	}
 })
 
 const technicalCorridor = new CorridorModule({
@@ -382,4 +399,6 @@ mainState.modules = [
 	technicalCorridor, //11
 	storageModuleA, //12
 	storageModuleB, //13
+	communicationCenter, //14
+	mediacalUnit, //15
 ];

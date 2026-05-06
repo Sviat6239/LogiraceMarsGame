@@ -56,3 +56,9 @@ export class CommunicationCenter extends StateModule {
         super(title, description, damage, maxSpace, freeSpace, oxygen, maxOxygen, temperature, airPollution, moinsture, energyConsumption, nextLocation, inventory);
     }
 }
+
+export class MediacalUnit extends StateModule {
+    constructor(title, description, damage, maxSpace, freeSpace, oxygen, maxOxygen, temperature, airPollution, moinsture, energyConsumption, nextLocation, inventory) {
+        super(title, description, damage, maxSpace, freeSpace, oxygen, maxOxygen, temperature, airPollution, moinsture, energyConsumption, nextLocation, inventory);
+    }
+}
