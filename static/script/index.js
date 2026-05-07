@@ -5,10 +5,11 @@ import { mainGoal, subGoals } from "./goals.js";
 import { CafeteriaModule, CommunicationCenter, GreenHouseModule, LivingModule, MediacalUnit, ReactorModule } from "./stateModules.js";
 
 document.addEventListener("DOMContentLoaded", function () {
-
+    //стани інтерфейсу
     let invOpen = false;
     let goalsOpen = false;
 
+    //елементи хтмл сторінки
     const loc = document.querySelector(".location");
     const desc = document.querySelector(".description");
     const btns = document.querySelector(".moveBtn");
@@ -25,11 +26,13 @@ document.addEventListener("DOMContentLoaded", function () {
     const dialogueMessage = document.querySelector(".dialogueMessage");
     const controlButtons = document.querySelector(".controlButtons");
 
+    //стан дуалогів
     let dialogue = null;
     let dialogueStep = 0;
     let dialogueActive = false;
     let dialogueCallback = null;
 
+    //флаги програвання діалогів в локаціях
     const dialoguePlayedFlag = {
         mainModule: false,
         mainCorridor: false,
@@ -48,7 +51,7 @@ document.addEventListener("DOMContentLoaded", function () {
         communicationCenter: false,
         mediacalUnit: false
     }
-
+    //кільскість разів котрі гравець посітив локацію
     const locationVisits = {
         mainModule: 1,
         mainCorridor: 0,
@@ -64,8 +67,10 @@ document.addEventListener("DOMContentLoaded", function () {
         mediacalUnit: 0
     }
 
+    //стартова локація гравця
     player.location = mainState.modules[0];
 
+    //фунцкія початку діалогу, котра заморожує інтерфейс
     function startDialogue(data, callback) {
         dialogue = data;
         dialogueStep = 0;
@@ -74,6 +79,7 @@ document.addEventListener("DOMContentLoaded", function () {
         renderDialogue();
     }
 
+    //функція рендеру діалогку під кнопками переходу на інші локації
     function renderDialogue() {
         if (!dialogueActive) return;
 
@@ -98,6 +104,7 @@ document.addEventListener("DOMContentLoaded", function () {
         controlButtons.appendChild(btn);
     }
 
+    //функція закінчення діалогку котра відморожує інтерфейс
     function endDialogue() {
         dialogueActive = false;
         dialogueMessage.textContent = "";
@@ -110,7 +117,7 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     }
 
-
+    //головна функція для оновлення інтерфейсу та трігери
     function update() {
 
         loc.textContent = player.location.title;
@@ -133,6 +140,8 @@ document.addEventListener("DOMContentLoaded", function () {
                 const currentIdx = mainState.modules.indexOf(player.location);
                 locationVisits[currentIdx] = (locationVisits[currentIdx] || 0) + 1;
 
+
+                //перевірка в котрій з локації гравець
                 if (player.location === mainState.modules[1] && !dialoguePlayedFlag.mainCorridor) {
                     dialoguePlayedFlag.mainCorridor = true;
                     startDialogue(inMainCorriodrDialogue);
@@ -208,6 +217,7 @@ document.addEventListener("DOMContentLoaded", function () {
                     startDialogue(mediacalUnitDialogue);
                 }
 
+                //перевірка чи виконані умови для зміни стану завдань
                 if (currentIdx === 10 && locationVisits[currentIdx] === 2) {
                     startDialogue(reactorModuleGoalDialogue);
                     subGoals[0].completed = true;
@@ -233,7 +243,7 @@ document.addEventListener("DOMContentLoaded", function () {
                     subGoals[5].completed = true;
                 }
 
-
+                //рекурсивний виклик фугкції
                 update();
             };
 
@@ -352,6 +362,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     }
 
+    //лічільниу кисню (не реалізований контент)
     function calcOxygen() {
         mainState.oxygen = 0;
 
@@ -360,6 +371,7 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     }
 
+    //лічільник забруднення повітря (не руалізовний контент)
     function calcPollution() {
         mainState.airPollution = 0;
 
@@ -368,6 +380,7 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     }
 
+    //лічільник тіків
     function tick() {
 
         mainState.modules[8].oxygen += 0.01;
@@ -393,6 +406,7 @@ document.addEventListener("DOMContentLoaded", function () {
         goalsPanel.classList.add("hidden");
     }
 
+    //функція відкриття інвентаря
     invBtn.onclick = function () {
         if (dialogueActive) return;
 
@@ -405,6 +419,7 @@ document.addEventListener("DOMContentLoaded", function () {
         goalsPanel.classList.add("hidden");
     };
 
+    //функція відкриття віконця з цілями
     goalsBtn.onclick = function () {
         if (dialogueActive) return;
 
@@ -417,8 +432,11 @@ document.addEventListener("DOMContentLoaded", function () {
         invPanel.classList.add("hidden");
     };
 
+    //стартовий діалог
     startDialogue(introDialogue);
 
+    //виклик функції оновлення
     update();
+    //інтервал тіків
     setInterval(tick, 1000);
 });
