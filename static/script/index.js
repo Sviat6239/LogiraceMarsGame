@@ -1,6 +1,6 @@
 import { mainState } from "./mainState.js";
 import { player } from "./player.js";
-import { introDialogue, inMainCorriodrDialogue, inCafeteriaModuleDialogue, inCafeteriaModuleDialogue2, inCafeteriaModuleDialogue3, inLivingCorridorDialogue, inLivingModuleADialogue, inLivingModuleBDialogue, inLivingModuleCDialogue, greenCorridorDialogue, greenHouseModuleADialogue, greenHouseModuleBDialogue, technicalCorridorDialogue, reactorModuleDialogue, storageModuleADialogue, storageModuleBDialogue, communicationCenterDialogue, mediacalUnitDialogue, reactorModuleGoalDialogue } from "./dialogue.js";
+import { introDialogue, inMainCorriodrDialogue, inCafeteriaModuleDialogue, inCafeteriaModuleDialogue2, inCafeteriaModuleDialogue3, inLivingCorridorDialogue, inLivingModuleADialogue, inLivingModuleBDialogue, inLivingModuleCDialogue, greenCorridorDialogue, greenHouseModuleADialogue, greenHouseModuleBDialogue, technicalCorridorDialogue, reactorModuleDialogue, storageModuleADialogue, storageModuleBDialogue, communicationCenterDialogue, mediacalUnitDialogue, reactorModuleGoalDialogue, communicationCenterGoalDialogue, communicationCenterGoalDialogue2, reactorModuleGoalDialogue, airFiltrationGoalDialogue, emergencySignalGoalDialogue, colonistsDeathGoalDialogue } from "./dialogue.js";
 import { mainGoal, subGoals } from "./goals.js";
 import { CafeteriaModule, CommunicationCenter, GreenHouseModule, LivingModule, MediacalUnit, ReactorModule } from "./stateModules.js";
 
@@ -213,24 +213,28 @@ document.addEventListener("DOMContentLoaded", function () {
                     startDialogue(reactorModuleGoalDialogue);
                     alert('Живлення відновлене.');
                 }
-                if (currentIdx === 8 && locationVisits[currentIdx] === 2 && subGoals[0].completed === true) {
+                if (currentIdx === 7 && locationVisits[8] === 2 && locationVisits[9] === 2 && subGoals[0].completed === true) {
                     subGoals[1].completed = true;
                     alert('Система фільтрації повітря налагоджено.');
                 }
                 if (currentIdx === 14 && locationVisits[currentIdx] === 2 && subGoals[0].completed === true) {
                     subGoals[2].completed = true;
+                    startDialogue(communicationCenterGoalDialogue);
                     alert('Вузол зв"язку відновлено.');
                 }
                 if (currentIdx === 14 && locationVisits[currentIdx] === 3 && subGoals[0].completed === true && subGoals[2].completed === true) {
                     subGoals[3].completed = true;
+                    startDialogue(communicationCenterGoalDialogue2)
                     alert('Живлення на передавач подане.');
                 }
                 if (currentIdx === 0 && locationVisits[currentIdx] === 2 && subGoals[0].completed === true && subGoals[2].completed === true && subGoals[3].completed === true) {
                     subGoals[4].completed = true;
+                    startDialogue(emergencySignalGoalDialogue)
                     alert('Аварійний сигнал був відправленний на орбітальну станцію.');
                 }
                 if (currentIdx === 15 && locationVisits[currentIdx] === 2 && subGoals[0].completed === true) {
                     subGoals[5].completed = true;
+                    startDialogue(colonistsDeathGoalDialogue)
                     alert('З"ясована причина гибелі колоністів.');
                 }
 
